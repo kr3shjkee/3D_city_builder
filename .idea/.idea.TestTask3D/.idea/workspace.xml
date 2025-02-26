@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4417b480-fafb-47dc-a4bd-95e71ff7d911" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/EventSystem/AbstractGameEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/EventSystem/AbstractGameEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/GameFsm/GameStateMachineBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/GameFsm/GameStateMachineBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/App.Core.MVVM.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/App.Core.MVVM.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/Elements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/Elements/IAnimationElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/Elements/IAnimationElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/Elements/IElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/Elements/IElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/View.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/View/AbstractPayloadView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/View/AbstractPayloadView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/View/AbstractView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/View/AbstractView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/View/IView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/View/IView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/ViewModel.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/ViewModel/AbstractViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/ViewModel/AbstractViewModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/ViewModel/IViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/MVVM/ViewModel/IViewModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/App.Core.Sample.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/App.Core.Sample.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/GameStateMachine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/GameStateMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/StateFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/StateFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/States.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/States/BootstrapState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/States/BootstrapState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/States/MenuState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/GameFsm/States/MenuState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/Installers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/Installers/RootInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Infrastructure/Installers/RootInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Infrastructure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Infrastructure/CompositionRoot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Infrastructure/CompositionRoot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Infrastructure/MainInstallerMVP.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Infrastructure/MainInstallerMVP.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Presenters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Presenters/MenuPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Presenters/MenuPresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Presenters/SettingsPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Presenters/SettingsPresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Views.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Views/MenuView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Views/MenuView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Views/SettingsView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVP/Presentation/Views/SettingsView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Infrastructure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Infrastructure/CompositionRoot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Infrastructure/CompositionRoot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Infrastructure/MainInstallerMVVM.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Infrastructure/MainInstallerMVVM.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/ViewModels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/ViewModels/MenuViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/ViewModels/MenuViewModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/ViewModels/SettingsViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/ViewModels/SettingsViewModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/Views.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/Views/MenuView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/Views/MenuView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/Views/SettingsView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/MVVM/Presentation/Views/SettingsView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Infrastructure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Infrastructure/GameRoot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Infrastructure/GameRoot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Infrastructure/GameRunner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Infrastructure/GameRunner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Menu Canvas MVP.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Menu Canvas MVP.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Menu Canvas MVVM.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Menu Canvas MVVM.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Menu Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Menu Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Settings Canvas MVP.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Settings Canvas MVP.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Settings Canvas MVVM.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Settings Canvas MVVM.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Settings Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Prefabs/Windows/Settings Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Resources/ProjectContext.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Resources/ProjectContext.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVP/MainScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVP/MainScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVP/_BootstrapScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVP/_BootstrapScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVVM.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVVM/MainScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVVM/MainScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVVM/_BootstrapScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Scenes/MVVM/_BootstrapScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Shared.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Shared/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Shared/Windows/Menu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Shared/Windows/Menu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Shared/Windows/Settings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Samples/Shared/Windows/Settings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Internet Reachability Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Internet Reachability Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Loading Curtain Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Loading Curtain Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Settings Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Settings Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sign In.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sign In/Sign In Button.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sign In/Sign In Button.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sign In/Sign In Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sign In/Sign In Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Start Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Start Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/GameStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/MainUi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/GameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/StateFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MenuState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Menu.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/Installers/RootInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/MainUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiView.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/EventSystem/AbstractGameEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/GameFsm/GameStateMachineBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2tZwuVmYNY7kFT97gRzdgo9uzRk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4417b480-fafb-47dc-a4bd-95e71ff7d911" name="Default Changelist" comment="" />
+      <created>1740573129339</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740573129339</updated>
+      <workItem from="1740573137322" duration="1958000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1740573901007">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740573901007" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1740573575299">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740573575299" />
+  </component>
+</project>

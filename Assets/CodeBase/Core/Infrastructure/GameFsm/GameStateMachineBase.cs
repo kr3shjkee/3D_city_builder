@@ -6,7 +6,7 @@ namespace Core.Infrastructure.GameFsm
 {
     public abstract class GameStateMachineBase : IGameStateMachine
     {
-        private readonly Dictionary<Type, IExitableState> _states = new();
+        private readonly Dictionary<Type, IExitableState> _states = new Dictionary<Type, IExitableState>();
         private readonly IStatesFactory _statesFactory;
         private IExitableState _currentState;
         

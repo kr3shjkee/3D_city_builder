@@ -5,7 +5,7 @@ namespace Core.Infrastructure.EventSystem
 {
     public abstract class AbstractGameEvent : ScriptableObject
     {
-        readonly List<IGameEventListener> m_EventListeners = new();
+        readonly List<IGameEventListener> m_EventListeners = new List<IGameEventListener>();
 
         /// <summary>
         /// Triggers the current event instance and notifies the subscribers
