@@ -19,6 +19,7 @@ namespace Game.MVP.Presentation.Services
         public event Action<float> UpdateProgressBar;
         
         public event Action<int> UpdateStonesCount;
+        public event Action<int> BuildItem;
 
         public void InvokePrepareLevel()
         {
@@ -39,6 +40,11 @@ namespace Game.MVP.Presentation.Services
         public void InvokeUpdateStonesCount(int count)
         {
             UpdateStonesCount?.Invoke(count);
+        }
+
+        public void InvokeBuildItem(int id)
+        {
+            BuildItem?.Invoke(id);
         }
     }
 }

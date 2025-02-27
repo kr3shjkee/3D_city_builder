@@ -86,7 +86,10 @@ namespace Game.MVP.Presentation.Presenters
 
         private void OnTriggerEnterHandler(Collider collider)
         {
-            
+            if (collider.TryGetComponent(out MagazineElement magazineElement))
+            {
+                //TODO: Enter to Magazine magazineElement.Type
+            }
         }
         
         private async void OnTriggerStayHandlerAsync(Collider collider)
@@ -95,8 +98,22 @@ namespace Game.MVP.Presentation.Presenters
             {
                 _isDelay = true;
                 StoneElement stone = gettingElement.GetStone();
-                stone.MoveAsync(_view.ElementsPlace, new Vector3(0,_stones.Count * _settings.ElementsOffset,0));
+                await stone.MoveAsync(_view.ElementsPlace, new Vector3(0,_stones.Count * _settings.ElementsOffset,0));
                 _stones.Push(stone);
+                _levelService.InvokeUpdateStonesCount(_stones.Count);
+                await UniTask.Delay(TimeSpan.FromSeconds(_settings.Delay));
+                _isDelay = false;
+            }
+
+            if (collider.TryGetComponent(out BuildingElement buildingElement) && !_isDelay)
+            {
+                if(buildingElement.IsFullCompleted() || _stones.Count == 0)
+                    return;
+                
+                _isDelay = true;
+                _levelService.InvokeBuildItem(buildingElement.ID);
+                StoneElement stone = _stones.Pop();
+                _stonesPool.Despawn(stone);
                 _levelService.InvokeUpdateStonesCount(_stones.Count);
                 await UniTask.Delay(TimeSpan.FromSeconds(_settings.Delay));
                 _isDelay = false;
@@ -105,7 +122,10 @@ namespace Game.MVP.Presentation.Presenters
         
         private void OnTriggerExitHandler(Collider collider)
         {
-
+            if (collider.TryGetComponent(out MagazineElement magazineElement))
+            {
+                //TODO: Exit from Magazine magazineElement.Type
+            }
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Game.MVP.Infrastructure
         
         [SerializeField] private MainUiView _mainUiView;
         [SerializeField] private PlayerView _playerView;
+        [SerializeField] private LevelView _levelView;
 
         public override void InstallBindings()
         {
@@ -52,12 +53,14 @@ namespace Game.MVP.Infrastructure
         {
             Container.BindInstance(_mainUiView);
             Container.BindInstance(_playerView);
+            Container.BindInstance(_levelView);
         }
 
         private void BindPresenters()
         {
             Container.Bind<MainUiPresenter>().AsTransient();
             Container.BindInterfacesAndSelfTo<PlayerPresenter>().AsTransient();
+            Container.Bind<LevelPresenter>().AsTransient();
         }
 
         private void BindManagers()

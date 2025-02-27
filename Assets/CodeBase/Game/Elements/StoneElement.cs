@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Cysharp.Threading.Tasks;
 using Game.Animations;
 using UnityEngine;
 using Zenject;
@@ -27,11 +28,12 @@ namespace Game.Elements
             gameObject.transform.localPosition = Vector3.zero;
         }
 
-        public async void MoveAsync(Transform parent, Vector3 position)
+        public async UniTask MoveAsync(Transform parent, Vector3 position)
         {
             try
             {
                 transform.SetParent(parent, false);
+                gameObject.transform.localScale = Vector3.one;
                 _cts = new CancellationTokenSource();
                 await _animation.DoMoveAnimationAsync(position, _cts.Token);
             }
