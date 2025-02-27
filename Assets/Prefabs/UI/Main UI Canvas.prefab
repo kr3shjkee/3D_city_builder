@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 7795496140829803776}
   - component: {fileID: 169850714316399842}
   m_Layer: 5
-  m_Name: Box Counter
+  m_Name: Stone Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,9 +736,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9066434834937812687}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1129231038394897737
 MonoBehaviour:
@@ -753,8 +753,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CanvasGroup>k__BackingField: {fileID: 5806863844588363367}
-  <BoxesText>k__BackingField: {fileID: 3811720455748966388}
-  <BoxesCounterObject>k__BackingField: {fileID: 6941950946518574416}
+  <StonesCountText>k__BackingField: {fileID: 3811720455748966388}
+  <StonesCounterObject>k__BackingField: {fileID: 6941950946518574416}
+  <ProgressBarText>k__BackingField: {fileID: 1809044031309285959}
+  <ProgressBarFillImage>k__BackingField: {fileID: 8785153582516143401}
+  <ProgressBarObject>k__BackingField: {fileID: 889158330001636081}
 --- !u!1001 &7705265039620430185
 PrefabInstance:
   m_ObjectHideFlags: 0

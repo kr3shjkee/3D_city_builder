@@ -91,6 +91,19 @@
             </e>
           </e>
           <e p="Game" t="Include">
+            <e p="Animations" t="Include">
+              <e p="MoveAnimation.cs" t="Include" />
+            </e>
+            <e p="Data" t="Include">
+              <e p="Settings" t="Include">
+                <e p="GameSettings.cs" t="Include" />
+                <e p="PlayerSettings.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Elements" t="Include">
+              <e p="StoneElement.cs" t="Include" />
+              <e p="StoneGettingElement.cs" t="Include" />
+            </e>
             <e p="Infrastructure" t="Include">
               <e p="GameFsm" t="Include">
                 <e p="GameStateMachine.cs" t="Include" />
@@ -110,9 +123,15 @@
                 <e p="MainInstallerMVP.cs" t="Include" />
               </e>
               <e p="Presentation" t="Include">
+                <e p="Managers" t="Include">
+                  <e p="GameManager.cs" t="Include" />
+                </e>
                 <e p="Presenters" t="Include">
                   <e p="MainUiPresenter.cs" t="Include" />
                   <e p="PlayerPresenter.cs" t="Include" />
+                </e>
+                <e p="Services" t="Include">
+                  <e p="LevelService.cs" t="Include" />
                 </e>
                 <e p="Views" t="Include">
                   <e p="MainUiView.cs" t="Include" />

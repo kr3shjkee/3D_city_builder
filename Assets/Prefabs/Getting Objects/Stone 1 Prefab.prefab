@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5675784593488250578}
+  - component: {fileID: -1444372458525404723}
+  - component: {fileID: -6049731829736095828}
   m_Layer: 0
   m_Name: Stone 1 Prefab
   m_TagString: Untagged
@@ -32,6 +34,32 @@ Transform:
   - {fileID: 5128806050463192524}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &-1444372458525404723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8756220978294549365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fc45c73e214605ae68d0e8a6a6f879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: -6049731829736095828}
+--- !u!114 &-6049731829736095828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8756220978294549365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff98d3f1cb94d86b41d451d9d32371c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 0.5
 --- !u!1 &9194989504245804281
 GameObject:
   m_ObjectHideFlags: 0
