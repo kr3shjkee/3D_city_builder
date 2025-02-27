@@ -20,7 +20,8 @@ namespace Game.MVP.Infrastructure
             _sceneContainer = _sceneContext.Container;
 
             _sceneContainer
-                .ConstructView<MainUiView, MainUiPresenter>();
+                .ConstructView<MainUiView, MainUiPresenter>()
+                .ConstructView<PlayerView, PlayerPresenter>();
             
             return default;
         }

@@ -1,9 +1,11 @@
 using Core.MVP.Presenters;
+using Zenject;
 
 namespace Game.MVP.Presentation.Presenters
 {
-    public class MainUiPresenter : IPresenter
+    public class MainUiPresenter : IPresenter, IFixedTickable
     {
+        
         public void Enable()
         {
             
@@ -12,6 +14,11 @@ namespace Game.MVP.Presentation.Presenters
         public void Disable()
         {
             
+        }
+
+        public void FixedTick()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
