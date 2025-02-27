@@ -1,5 +1,6 @@
 ﻿using System;
 using Core.Infrastructure.WindowsFsm;
+using Game.Data.Dto;
 using Game.Shared.Windows;
 
 namespace Game.MVP.Presentation.Services
@@ -14,27 +15,14 @@ namespace Game.MVP.Presentation.Services
         }
         
         public event Action PrepareLevel;
-        
-        public event Action<bool> ActivateProgressBar;
-        public event Action<float> UpdateProgressBar;
-        
         public event Action<int> UpdateStonesCount;
         public event Action<int> BuildItem;
+        public event Action<MagazineProgressDto, bool> ShowProgressBar;
 
         public void InvokePrepareLevel()
         {
-            _windowFsm.OpenWindow(typeof(MainUi), true);
+            _windowFsm.OpenWindow(typeof(MainUi), false);
             PrepareLevel?.Invoke();
-        }
-
-        public void InvokeActivateProgressBar(bool isActive)
-        {
-            ActivateProgressBar?.Invoke(isActive);
-        }
-
-        public void InvokeUpdateProgressBar(float fill)
-        {
-            UpdateProgressBar?.Invoke(fill);
         }
 
         public void InvokeUpdateStonesCount(int count)
@@ -45,6 +33,17 @@ namespace Game.MVP.Presentation.Services
         public void InvokeBuildItem(int id)
         {
             BuildItem?.Invoke(id);
+        }
+
+        public void InvokeShowProgressBar(MagazineProgressDto dto, bool isAnimation)
+        {
+            ShowProgressBar?.Invoke(dto, isAnimation);
+        }
+
+        public void InvokeWinGame()
+        {
+            _windowFsm.CloseWindow(typeof(MainUi));
+            _windowFsm.OpenWindow(typeof(Win), false);
         }
     }
 }

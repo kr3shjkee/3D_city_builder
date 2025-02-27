@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Game.Data.Dto;
 using Game.Data.Enums;
 using UnityEngine;
 
@@ -7,10 +9,12 @@ namespace Game.Elements
 {
     public class MagazineElement : MonoBehaviour
     {
-        [SerializeField] private MagazineType _type;
         [SerializeField] private List<BuildingElement> _buildingElements;
 
-        public MagazineType Type => _type;
+        private BuildingStatus _status = BuildingStatus.NotBuilded;
+
+        public BuildingStatus Status => _status;
+        public event Action<MagazineProgressDto, bool> InvokeShowProgress;
 
         private void Awake()
         {
@@ -40,6 +44,14 @@ namespace Game.Elements
                 buildingElement.BuildPart();
             }
         }
+
+        public void ShowProgress(bool isActive, bool isAnimation)
+        {
+            int current = _buildingElements.Count(item => item.IsFullCompleted());
+            int max = _buildingElements.Count;
+            MagazineProgressDto dto = new MagazineProgressDto(current, max, isActive);
+            InvokeShowProgress?.Invoke(dto, isAnimation);
+        }
         
         private void SubscribeBuildingElements()
         {
@@ -68,8 +80,9 @@ namespace Game.Elements
                 }
                 else
                 {
-                    //TODO: Finish magazine
+                    _status = BuildingStatus.Builded;
                 }
+                ShowProgress(true, true);
             }
             else
             {

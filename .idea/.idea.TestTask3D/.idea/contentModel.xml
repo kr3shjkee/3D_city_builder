@@ -92,9 +92,13 @@
           </e>
           <e p="Game" t="Include">
             <e p="Animations" t="Include">
+              <e p="FillAnimation.cs" t="Include" />
               <e p="MoveAnimation.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
+              <e p="Dto" t="Include">
+                <e p="MagazineProgressDto.cs" t="Include" />
+              </e>
               <e p="Enums" t="Include">
                 <e p="BuildingStatus.cs" t="Include" />
                 <e p="MagazineType.cs" t="Include" />
@@ -137,6 +141,7 @@
                   <e p="LevelPresenter.cs" t="Include" />
                   <e p="MainUiPresenter.cs" t="Include" />
                   <e p="PlayerPresenter.cs" t="Include" />
+                  <e p="WinPresenter.cs" t="Include" />
                 </e>
                 <e p="Services" t="Include">
                   <e p="LevelService.cs" t="Include" />
@@ -145,12 +150,14 @@
                   <e p="LevelView.cs" t="Include" />
                   <e p="MainUiView.cs" t="Include" />
                   <e p="PlayerView.cs" t="Include" />
+                  <e p="WinView.cs" t="Include" />
                 </e>
               </e>
             </e>
             <e p="Shared" t="Include">
               <e p="Windows" t="Include">
                 <e p="MainUi.cs" t="Include" />
+                <e p="Win.cs" t="Include" />
               </e>
             </e>
           </e>

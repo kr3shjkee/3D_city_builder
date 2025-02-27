@@ -17,8 +17,7 @@ namespace Game.Elements
 
         public int ID => _id;
         public BuildingStatus Status => _status;
-        public GameObject BuyPlace => _buyPlace;
-        
+
         public event Action<int, int> UpdateCounts;
 
         public void Init()
@@ -40,6 +39,7 @@ namespace Game.Elements
 
                 item.gameObject.transform.localPosition = position;
             }
+            _buyPlace.SetActive(true);
             InvokeUpdateCounts();
         }
 

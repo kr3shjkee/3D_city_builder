@@ -88,7 +88,7 @@ namespace Game.MVP.Presentation.Presenters
         {
             if (collider.TryGetComponent(out MagazineElement magazineElement))
             {
-                //TODO: Enter to Magazine magazineElement.Type
+                magazineElement.ShowProgress(true, false);
             }
         }
         
@@ -98,9 +98,9 @@ namespace Game.MVP.Presentation.Presenters
             {
                 _isDelay = true;
                 StoneElement stone = gettingElement.GetStone();
+                _levelService.InvokeUpdateStonesCount(_stones.Count+1);
                 await stone.MoveAsync(_view.ElementsPlace, new Vector3(0,_stones.Count * _settings.ElementsOffset,0));
                 _stones.Push(stone);
-                _levelService.InvokeUpdateStonesCount(_stones.Count);
                 await UniTask.Delay(TimeSpan.FromSeconds(_settings.Delay));
                 _isDelay = false;
             }
@@ -124,7 +124,7 @@ namespace Game.MVP.Presentation.Presenters
         {
             if (collider.TryGetComponent(out MagazineElement magazineElement))
             {
-                //TODO: Exit from Magazine magazineElement.Type
+                magazineElement.ShowProgress(false, false);
             }
         }
     }

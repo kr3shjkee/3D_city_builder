@@ -1,7 +1,8 @@
 using System;
+using System.Threading;
 using Core.Infrastructure.WindowsFsm;
 using Core.MVP.Presenters;
-using Game.Data.Settings;
+using Game.Data.Dto;
 using Game.MVP.Presentation.Services;
 using Game.MVP.Presentation.Views;
 using Game.Shared.Windows;
@@ -13,21 +14,21 @@ namespace Game.MVP.Presentation.Presenters
         private readonly LevelService _levelService;
         private readonly MainUiView _view;
         private readonly IWindowFsm _windowFsm;
-        private readonly GameSettings _gameSettings;
         private readonly Type _window = typeof(MainUi);
+
+        private CancellationTokenSource _cts;
 
         public MainUiPresenter(
             MainUiView view, 
             LevelService levelService, 
-            IWindowFsm windowFsm,
-            GameSettings settings)
+            IWindowFsm windowFsm)
         {
             _view = view; 
             _levelService = levelService;
             _windowFsm = windowFsm;
-            _gameSettings = settings;
-            
+
             _levelService.UpdateStonesCount += UpdateStonesCount;
+            _levelService.ShowProgressBar += ShowProgressBarAsync;
         }
         
         public void Enable()
@@ -42,8 +43,12 @@ namespace Game.MVP.Presentation.Presenters
             _windowFsm.Closed -= OnHandleCloseWindow;
             
             _levelService.UpdateStonesCount -= UpdateStonesCount;
+            _levelService.ShowProgressBar -= ShowProgressBarAsync;
+            
+            _cts?.Dispose();
+            _cts = null;
         }
-        
+
         private void OnHandleOpenWindow(Type window)
         {
             if(_window != window || _view == null) return;
@@ -64,6 +69,32 @@ namespace Game.MVP.Presentation.Presenters
         {
             _view.StonesCounterObject.SetActive(count > 0);
             _view.StonesCountText.text = count.ToString();
+        }
+
+        private async void ShowProgressBarAsync(MagazineProgressDto dto, bool isAnimation)
+        {
+            _view.ProgressBarText.text = $"{dto.Current}/{dto.Max}";
+            _view.ProgressBarObject.SetActive(dto.IsActive);
+            float fill = (float) dto.Current / dto.Max;
+            
+            if (isAnimation)
+            {
+                try
+                {
+                    _cts = new CancellationTokenSource();
+                    await _view.FillAnimation.DoFillAnimationAsync(fill, _cts.Token);
+                }
+                catch (OperationCanceledException e)
+                {
+                    _view.ProgressBarFillImage.fillAmount = fill;
+                }
+                finally
+                {
+                    _cts?.Dispose();
+                    _cts = null;
+                }
+            }
+            _view.ProgressBarFillImage.fillAmount = fill;
         }
     }
 }

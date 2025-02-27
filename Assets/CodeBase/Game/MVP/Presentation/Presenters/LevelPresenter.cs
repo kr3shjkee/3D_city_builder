@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Core.MVP.Presenters;
+using Game.Data.Dto;
 using Game.Data.Enums;
 using Game.Elements;
 using Game.MVP.Presentation.Services;
@@ -19,6 +20,7 @@ namespace Game.MVP.Presentation.Presenters
 
             _levelService.PrepareLevel += PrepareLevel;
             _levelService.BuildItem += BuildPart;
+            Subscribe();
         }
         
         public void Enable()
@@ -30,6 +32,24 @@ namespace Game.MVP.Presentation.Presenters
         {
             _levelService.PrepareLevel -= PrepareLevel;
             _levelService.BuildItem -= BuildPart;
+            
+            Unsubscribe();
+        }
+
+        private void Subscribe()
+        {
+            foreach (MagazineElement magazine in _view.MagazineElements)
+            {
+                magazine.InvokeShowProgress += ShowProgress;
+            }
+        }
+
+        private void Unsubscribe()
+        {
+            foreach (MagazineElement magazine in _view.MagazineElements)
+            {
+                magazine.InvokeShowProgress -= ShowProgress;
+            }
         }
 
         private void PrepareLevel()
@@ -47,6 +67,14 @@ namespace Game.MVP.Presentation.Presenters
                 magazine.BuildPart(id);
             }
         }
-        
+
+        private void ShowProgress(MagazineProgressDto dto, bool isAnimation)
+        {
+            _levelService.InvokeShowProgressBar(dto,isAnimation);
+            if (_view.MagazineElements.All(item => item.Status == BuildingStatus.Builded))
+            {
+                _levelService.InvokeWinGame();
+            }
+        }
     }
 }
