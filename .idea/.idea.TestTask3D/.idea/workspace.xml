@@ -20,23 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4417b480-fafb-47dc-a4bd-95e71ff7d911" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Animations/FillAnimation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Animations/FillAnimation.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/MagazineProgressDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/MagazineProgressDto.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/WinPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/WinPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/WinView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/WinView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Win.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Win.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/StonesProgressDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/StonesProgressDto.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/BuildingElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/BuildingElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LevelPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LevelPresenter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" afterDir="false" />
@@ -45,7 +34,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Prefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Main UI Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Main UI Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Win Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Win Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,19 +79,20 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/StoneElement.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/MagazineProgressDto.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Animations/FillAnimation.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/PlayerPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Win.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LevelPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/BuildingElement.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/LevelService.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/WinView.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/WinPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/PlayerPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/LevelService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LevelPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/BuildingElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/StonesProgressDto.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" />
       </list>
     </option>
   </component>
@@ -149,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740573129339</updated>
       <workItem from="1740573137322" duration="11276000" />
-      <workItem from="1740663503108" duration="20947000" />
+      <workItem from="1740663503108" duration="27498000" />
     </task>
     <servers />
   </component>
@@ -178,77 +167,77 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="442" height="464" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697439691" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1740697526540">
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526540" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
-    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1740697526541">
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1740702796692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697526541" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
     <state x="794" y="221" key="RiderGenerateDialog" timestamp="1740695980633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740695980633" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1740697259500">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1740701124681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740697259500" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740701124681" />
   </component>
 </project>

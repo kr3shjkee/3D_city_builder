@@ -9,12 +9,16 @@ namespace Game.Elements
 {
     public class MagazineElement : MonoBehaviour
     {
+        [SerializeField] private MagazineType _type;
         [SerializeField] private List<BuildingElement> _buildingElements;
 
         private BuildingStatus _status = BuildingStatus.NotBuilded;
+        private BuildingElement _currentBuildingElement;
 
+        public MagazineType Type => _type;
         public BuildingStatus Status => _status;
-        public event Action<MagazineProgressDto, bool> InvokeShowProgress;
+        public event Action<MagazineProgressDto, bool> InvokeShowMagazineProgress;
+        public event Action<StonesProgressDto> InvokeStonesProgress;
 
         private void Awake()
         {
@@ -33,7 +37,8 @@ namespace Game.Elements
                 buildingElement.Init();
                 buildingElement.gameObject.SetActive(false);
             }
-            _buildingElements[0].gameObject.SetActive(true);
+            _currentBuildingElement = _buildingElements[0];
+            _currentBuildingElement.gameObject.SetActive(true);
         }
 
         public void BuildPart(int id)
@@ -50,14 +55,24 @@ namespace Game.Elements
             int current = _buildingElements.Count(item => item.IsFullCompleted());
             int max = _buildingElements.Count;
             MagazineProgressDto dto = new MagazineProgressDto(current, max, isActive);
-            InvokeShowProgress?.Invoke(dto, isAnimation);
+            InvokeShowMagazineProgress?.Invoke(dto, isAnimation);
+        }
+        
+        public void UpdateStonesProgress()
+        {
+            if (_currentBuildingElement != null)
+            {
+                int needStones = _currentBuildingElement.NeedStones();
+                StonesProgressDto dto = new StonesProgressDto(needStones, _currentBuildingElement.BuyPlace);
+                InvokeStonesProgress?.Invoke(dto);
+            }
         }
         
         private void SubscribeBuildingElements()
         {
             foreach (BuildingElement buildingElement in _buildingElements)
             {
-                buildingElement.UpdateCounts += UpdateBuildCount;
+                buildingElement.UpdateStoneProgress += UpdateStoneBuildProgress;
             }
         }
         
@@ -65,29 +80,28 @@ namespace Game.Elements
         {
             foreach (BuildingElement buildingElement in _buildingElements)
             {
-                buildingElement.UpdateCounts -= UpdateBuildCount;
+                buildingElement.UpdateStoneProgress -= UpdateStoneBuildProgress;
             }
         }
         
-        private void UpdateBuildCount(int allCount, int completedCount)
+        private void UpdateStoneBuildProgress(int allCount, int completedCount)
         {
             if (allCount == completedCount)
             {
-                BuildingElement buildingElement = _buildingElements.FirstOrDefault(item => item.Status == BuildingStatus.NotBuilded);
-                if (buildingElement != null)
+                _currentBuildingElement = _buildingElements.FirstOrDefault(item => item.Status == BuildingStatus.NotBuilded);
+                if (_currentBuildingElement != null)
                 {
-                    buildingElement.gameObject.SetActive(true);
+                    _currentBuildingElement.gameObject.SetActive(true);
                 }
                 else
                 {
                     _status = BuildingStatus.Builded;
+                    InvokeStonesProgress?.Invoke(null);
                 }
                 ShowProgress(true, true);
             }
-            else
-            {
-                //TODO: Update Counts on Canvas
-            }
+
+            UpdateStonesProgress();
         }
     }
 }

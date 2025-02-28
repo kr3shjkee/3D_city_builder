@@ -20,6 +20,7 @@ namespace Game.MVP.Presentation.Presenters
 
             _levelService.PrepareLevel += PrepareLevel;
             _levelService.BuildItem += BuildPart;
+            _levelService.PrepareStonesProgress += PrepareStonesProgress;
             Subscribe();
         }
         
@@ -32,6 +33,7 @@ namespace Game.MVP.Presentation.Presenters
         {
             _levelService.PrepareLevel -= PrepareLevel;
             _levelService.BuildItem -= BuildPart;
+            _levelService.PrepareStonesProgress -= PrepareStonesProgress;
             
             Unsubscribe();
         }
@@ -40,7 +42,8 @@ namespace Game.MVP.Presentation.Presenters
         {
             foreach (MagazineElement magazine in _view.MagazineElements)
             {
-                magazine.InvokeShowProgress += ShowProgress;
+                magazine.InvokeShowMagazineProgress += ShowMagazineProgress;
+                magazine.InvokeStonesProgress += UpdateStonesProgress;
             }
         }
 
@@ -48,7 +51,8 @@ namespace Game.MVP.Presentation.Presenters
         {
             foreach (MagazineElement magazine in _view.MagazineElements)
             {
-                magazine.InvokeShowProgress -= ShowProgress;
+                magazine.InvokeShowMagazineProgress -= ShowMagazineProgress;
+                magazine.InvokeStonesProgress -= UpdateStonesProgress;
             }
         }
 
@@ -68,13 +72,26 @@ namespace Game.MVP.Presentation.Presenters
             }
         }
 
-        private void ShowProgress(MagazineProgressDto dto, bool isAnimation)
+        private void ShowMagazineProgress(MagazineProgressDto dto, bool isAnimation)
         {
             _levelService.InvokeShowProgressBar(dto,isAnimation);
             if (_view.MagazineElements.All(item => item.Status == BuildingStatus.Builded))
             {
                 _levelService.InvokeWinGame();
             }
+        }
+
+        private void UpdateStonesProgress(StonesProgressDto dto)
+        {
+            _levelService.InvokeUpdateStonesProgress(dto);
+        }
+
+        private void PrepareStonesProgress(MagazineType type)
+        {
+            MagazineElement magazineElement = _view.MagazineElements.FirstOrDefault(item => item.Type == type);
+            
+            if(magazineElement != null)
+                magazineElement.UpdateStonesProgress();
         }
     }
 }

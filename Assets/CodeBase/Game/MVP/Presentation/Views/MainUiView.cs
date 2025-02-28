@@ -14,5 +14,8 @@ namespace Game.MVP.Presentation.Views
         [field: SerializeField] public Image ProgressBarFillImage { get; private set; }
         [field: SerializeField] public GameObject ProgressBarObject { get; private set; }
         [field: SerializeField] public FillAnimation FillAnimation { get; private set; }
+        [field: SerializeField] public Camera MainCamera { get; private set; }
+        [field: SerializeField] public RectTransform StoneProgressPoint { get; private set; }
+        [field: SerializeField] public TMP_Text StoneProgressText { get; private set; }
     }
 }

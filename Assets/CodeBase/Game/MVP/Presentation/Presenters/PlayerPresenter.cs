@@ -89,6 +89,7 @@ namespace Game.MVP.Presentation.Presenters
             if (collider.TryGetComponent(out MagazineElement magazineElement))
             {
                 magazineElement.ShowProgress(true, false);
+                _levelService.InvokeShowStonesProgress(true, magazineElement.Type);
             }
         }
         
@@ -125,6 +126,7 @@ namespace Game.MVP.Presentation.Presenters
             if (collider.TryGetComponent(out MagazineElement magazineElement))
             {
                 magazineElement.ShowProgress(false, false);
+                _levelService.InvokeShowStonesProgress(false, magazineElement.Type);
             }
         }
     }

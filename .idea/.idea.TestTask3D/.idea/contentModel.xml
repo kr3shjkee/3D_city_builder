@@ -98,6 +98,7 @@
             <e p="Data" t="Include">
               <e p="Dto" t="Include">
                 <e p="MagazineProgressDto.cs" t="Include" />
+                <e p="StonesProgressDto.cs" t="Include" />
               </e>
               <e p="Enums" t="Include">
                 <e p="BuildingStatus.cs" t="Include" />

@@ -60,7 +60,7 @@ namespace Game.MVP.Infrastructure
 
         private void BindPresenters()
         {
-            Container.Bind<MainUiPresenter>().AsTransient();
+            Container.BindInterfacesAndSelfTo<MainUiPresenter>().AsTransient();
             Container.BindInterfacesAndSelfTo<PlayerPresenter>().AsTransient();
             Container.Bind<LevelPresenter>().AsTransient();
             Container.Bind<WinPresenter>().AsTransient();

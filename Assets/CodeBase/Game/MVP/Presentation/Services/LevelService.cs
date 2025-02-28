@@ -1,6 +1,7 @@
 ﻿using System;
 using Core.Infrastructure.WindowsFsm;
 using Game.Data.Dto;
+using Game.Data.Enums;
 using Game.Shared.Windows;
 
 namespace Game.MVP.Presentation.Services
@@ -18,6 +19,9 @@ namespace Game.MVP.Presentation.Services
         public event Action<int> UpdateStonesCount;
         public event Action<int> BuildItem;
         public event Action<MagazineProgressDto, bool> ShowProgressBar;
+        public event Action<StonesProgressDto> UpdateStonesProgress;
+        public event Action<bool> ShowStonesProgress;
+        public event Action<MagazineType> PrepareStonesProgress;
 
         public void InvokePrepareLevel()
         {
@@ -38,6 +42,19 @@ namespace Game.MVP.Presentation.Services
         public void InvokeShowProgressBar(MagazineProgressDto dto, bool isAnimation)
         {
             ShowProgressBar?.Invoke(dto, isAnimation);
+        }
+
+        public void InvokeUpdateStonesProgress(StonesProgressDto dto)
+        {
+            UpdateStonesProgress?.Invoke(dto);
+        }
+
+        public void InvokeShowStonesProgress(bool isActive, MagazineType type)
+        {
+            if(isActive)
+                PrepareStonesProgress?.Invoke(type);
+            
+            ShowStonesProgress?.Invoke(isActive);
         }
 
         public void InvokeWinGame()

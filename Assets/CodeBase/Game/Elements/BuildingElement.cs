@@ -17,8 +17,9 @@ namespace Game.Elements
 
         public int ID => _id;
         public BuildingStatus Status => _status;
+        public Transform BuyPlace => _buyPlace.transform;
 
-        public event Action<int, int> UpdateCounts;
+        public event Action<int, int> UpdateStoneProgress;
 
         public void Init()
         {
@@ -61,18 +62,22 @@ namespace Game.Elements
             return _buildObjects.All(item => item.Status == BuildingStatus.Builded);
         }
 
+        public int NeedStones()
+        {
+            return _buildObjects.Count(item => item.Status == BuildingStatus.NotBuilded);
+        }
+
         private void InvokeUpdateCounts()
         {
             int allCount = _buildObjects.Count;
-            List<BuildingPartElement> completedElements = new List<BuildingPartElement>(_buildObjects.Where(item => item.Status == BuildingStatus.Builded));
-            int completedCount = completedElements.Count;
+            int completedCount = _buildObjects.Count(item => item.Status == BuildingStatus.Builded);
 
             if (allCount == completedCount)
             {
                 _buyPlace.SetActive(false);
                 _status = BuildingStatus.Builded;
             }
-            UpdateCounts?.Invoke(completedCount, allCount);
+            UpdateStoneProgress?.Invoke(completedCount, allCount);
         }
     }
 }
