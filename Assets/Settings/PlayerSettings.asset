@@ -16,4 +16,4 @@ MonoBehaviour:
   <StartPosition>k__BackingField: {x: -5, y: -2.325, z: 2.5}
   <MaxElementsCount>k__BackingField: 5
   <ElementsOffset>k__BackingField: 0.2
-  <Delay>k__BackingField: 1
+  <Delay>k__BackingField: 0.6
