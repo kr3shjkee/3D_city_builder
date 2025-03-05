@@ -20,6 +20,7 @@ namespace Game.MVP.Infrastructure
         [SerializeField] private PlayerView _playerView;
         [SerializeField] private LevelView _levelView;
         [SerializeField] private WinView _winView;
+        [SerializeField] private LoadingView _loadingView;
 
         public override void InstallBindings()
         {
@@ -48,7 +49,9 @@ namespace Game.MVP.Infrastructure
         private void BindServices()
         {
             Container.BindInterfacesAndSelfTo<SaveLoadService>().AsSingle(); 
+            Container.BindInterfacesAndSelfTo<MoneyService>().AsSingle(); 
             Container.Bind<LevelService>().AsSingle(); 
+            Container.Bind<TimerService>().AsSingle();
         }
 
         private void BindViews()
@@ -57,6 +60,7 @@ namespace Game.MVP.Infrastructure
             Container.BindInstance(_playerView);
             Container.BindInstance(_levelView);
             Container.BindInstance(_winView);
+            Container.BindInstance(_loadingView);
         }
 
         private void BindPresenters()
@@ -65,6 +69,7 @@ namespace Game.MVP.Infrastructure
             Container.BindInterfacesAndSelfTo<PlayerPresenter>().AsTransient();
             Container.Bind<LevelPresenter>().AsTransient();
             Container.Bind<WinPresenter>().AsTransient();
+            Container.Bind<LoadingPresenter>().AsTransient();
         }
 
         private void BindManagers()

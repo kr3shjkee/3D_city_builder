@@ -147,16 +147,20 @@
                 </e>
                 <e p="Presenters" t="Include">
                   <e p="LevelPresenter.cs" t="Include" />
+                  <e p="LoadingPresenter.cs" t="Include" />
                   <e p="MainUiPresenter.cs" t="Include" />
                   <e p="PlayerPresenter.cs" t="Include" />
                   <e p="WinPresenter.cs" t="Include" />
                 </e>
                 <e p="Services" t="Include">
                   <e p="LevelService.cs" t="Include" />
+                  <e p="MoneyService.cs" t="Include" />
                   <e p="SaveLoadService.cs" t="Include" />
+                  <e p="TimerService.cs" t="Include" />
                 </e>
                 <e p="Views" t="Include">
                   <e p="LevelView.cs" t="Include" />
+                  <e p="LoadingView.cs" t="Include" />
                   <e p="MainUiView.cs" t="Include" />
                   <e p="PlayerView.cs" t="Include" />
                   <e p="WinView.cs" t="Include" />
@@ -165,6 +169,7 @@
             </e>
             <e p="Shared" t="Include">
               <e p="Windows" t="Include">
+                <e p="Loading.cs" t="Include" />
                 <e p="MainUi.cs" t="Include" />
                 <e p="Win.cs" t="Include" />
               </e>

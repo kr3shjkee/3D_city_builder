@@ -76,5 +76,15 @@ namespace Game.MVP.Presentation.Services
         {
             File.WriteAllText(_filePath, JsonUtility.ToJson(_dto));
         }
+
+        public void SaveMoney(int value, bool isPlus)
+        {
+            if (isPlus)
+                _dto.Money += value;
+            else
+                _dto.Money -= value;
+            
+            SaveData();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Game.MVP.Presentation.Presenters
     public class MainUiPresenter : IPresenter, ILateTickable
     {
         private readonly LevelService _levelService;
+        private readonly MoneyService _moneyService;
         private readonly MainUiView _view;
         private readonly IWindowFsm _windowFsm;
         private readonly Type _window = typeof(MainUi);
@@ -24,11 +25,15 @@ namespace Game.MVP.Presentation.Presenters
         public MainUiPresenter(
             MainUiView view, 
             LevelService levelService, 
+            MoneyService moneyService,
             IWindowFsm windowFsm)
         {
             _view = view; 
             _levelService = levelService;
+            _moneyService = moneyService;
             _windowFsm = windowFsm;
+
+            _moneyService.UpdateMoney += UpdateMoneyCounter;
 
             _levelService.UpdateStonesCount += UpdateStonesCount;
             _levelService.ShowProgressBar += ShowProgressBarAsync;
@@ -46,6 +51,8 @@ namespace Game.MVP.Presentation.Presenters
         {
             _windowFsm.Opened -= OnHandleOpenWindow;
             _windowFsm.Closed -= OnHandleCloseWindow;
+            
+            _moneyService.UpdateMoney -= UpdateMoneyCounter;
             
             _levelService.UpdateStonesCount -= UpdateStonesCount;
             _levelService.ShowProgressBar -= ShowProgressBarAsync;
@@ -90,6 +97,11 @@ namespace Game.MVP.Presentation.Presenters
         {
             _view.StonesCounterObject.SetActive(count > 0);
             _view.StonesCountText.text = count.ToString();
+        }
+
+        private void UpdateMoneyCounter(int value)
+        {
+            _view.MoneyCountText.text = value.ToString();
         }
 
         private async void ShowProgressBarAsync(MagazineProgressDto dto, bool isAnimation)

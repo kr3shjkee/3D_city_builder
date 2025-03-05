@@ -20,25 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4417b480-fafb-47dc-a4bd-95e71ff7d911" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/DeleteSaveFile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/DeleteSaveFile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/SaveDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/SaveDto.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Enums/CallbackType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Enums/CallbackType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/JsonsSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/JsonsSettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/MoneySettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/MoneySettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LoadingPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LoadingPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/MoneyService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/MoneyService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/TimerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/TimerService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/LoadingView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/LoadingView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Loading.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Loading.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/GameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/GameSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/GameSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/GameSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Main UI Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Main UI Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,6 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/EventSystem/AbstractGameEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/GameFsm/GameStateMachineBase.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Animations/MoveAnimation.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/StoneGettingElement.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/PlayerSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/PlayerView.cs" />
@@ -84,27 +85,33 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/MagazineProgressDto.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Animations/FillAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Win.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/WinView.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/WinPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/PlayerPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/LevelService.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LevelPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/BuildingElement.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/StonesProgressDto.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Enums/CallbackType.cs" />
         <option value="$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Editor/DeleteSaveFile.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/JsonsSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/GameSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/MoneySettings.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/SaveDto.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/TimerService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/Loading.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/LoadingView.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LoadingPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/CompositionRoot.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/MoneyService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" />
       </list>
     </option>
   </component>
@@ -151,7 +158,7 @@
       <updated>1740573129339</updated>
       <workItem from="1740573137322" duration="11276000" />
       <workItem from="1740663503108" duration="27498000" />
-      <workItem from="1741184214851" duration="2051000" />
+      <workItem from="1741184214851" duration="4985000" />
     </task>
     <servers />
   </component>
@@ -244,13 +251,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740702796692" />
-    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1740695980633">
+    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1741187420164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740695980633" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1741185726882">
+    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1741187420164" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1741189216246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1741185726882" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1741189216246" />
   </component>
 </project>

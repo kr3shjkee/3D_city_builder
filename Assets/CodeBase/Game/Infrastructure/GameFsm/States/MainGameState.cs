@@ -45,6 +45,7 @@ namespace Game.Infrastructure.GameFsm.States
         {
             _windowResolve.CleanUp();
 
+            _windowResolve.Set<Loading>();
             _windowResolve.Set<MainUi>();
             _windowResolve.Set<Win>();
         }
