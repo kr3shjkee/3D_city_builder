@@ -101,6 +101,7 @@
             <e p="Data" t="Include">
               <e p="Dto" t="Include">
                 <e p="MagazineProgressDto.cs" t="Include" />
+                <e p="MoneyPriceDto.cs" t="Include" />
                 <e p="SaveDto.cs" t="Include" />
                 <e p="StonesProgressDto.cs" t="Include" />
               </e>

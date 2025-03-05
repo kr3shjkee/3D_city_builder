@@ -3,6 +3,7 @@ using System.Threading;
 using Core.Infrastructure.WindowsFsm;
 using Core.MVP.Presenters;
 using Game.Data.Dto;
+using Game.Data.Enums;
 using Game.MVP.Presentation.Services;
 using Game.MVP.Presentation.Views;
 using Game.Shared.Windows;
@@ -20,7 +21,9 @@ namespace Game.MVP.Presentation.Presenters
         private readonly Type _window = typeof(MainUi);
 
         private CancellationTokenSource _cts;
-        private Transform _uiTarget;
+        private Transform _uiStoneTarget;
+        private Transform _uiLeftMoneyTarget;
+        private Transform _uiRightMoneyTarget;
 
         public MainUiPresenter(
             MainUiView view, 
@@ -65,16 +68,21 @@ namespace Game.MVP.Presentation.Presenters
         
         public void LateTick()
         {
-            if(_uiTarget == null || !_view.StoneProgressPoint.gameObject.activeSelf)
-                return;
-            
-            Vector3 position = _view.MainCamera.WorldToScreenPoint(_uiTarget.position);
+            if (_uiStoneTarget != null && _view.StoneProgressPoint.gameObject.activeSelf)
+            {
+                CalculatePosition(_uiStoneTarget.position, _view.StoneProgressPoint);
+            }
+        }
 
-            float offset = _view.StoneProgressPoint.sizeDelta.x / 2;
+        private void CalculatePosition(Vector3 targetPosition, RectTransform pointTransform)
+        {
+            Vector3 position = _view.MainCamera.WorldToScreenPoint(targetPosition);
+
+            float offset = pointTransform.sizeDelta.x / 2;
             position.x = Mathf.Clamp(position.x, offset, Screen.width - offset);
             position.y = Mathf.Clamp(position.y, offset, Screen.height - offset);
             
-            _view.StoneProgressPoint.position = position;
+            pointTransform.position = position;
         }
 
         private void OnHandleOpenWindow(Type window)
@@ -139,7 +147,28 @@ namespace Game.MVP.Presentation.Presenters
             }
             
             _view.StoneProgressText.text = dto.Count.ToString();
-            _uiTarget = dto.Target;
+            _uiStoneTarget = dto.Target;
+        }
+
+        private void UpdateMoneyPrices(MoneyPriceDto dto)
+        {
+            if (dto == null)
+            {
+                _view.LeftMoneyPoint.gameObject.SetActive(false);
+                _view.RightMoneyPoint.gameObject.SetActive(false);
+            }
+            else if(dto.MagazinesPrices.TryGetValue(MagazineType.Left, out int leftPrice))
+            {
+                _view.LeftMoneyPoint.gameObject.SetActive(true);
+                _view.LeftMoneyText.text = leftPrice.ToString();
+                _uiLeftMoneyTarget = dto.LeftTransform;
+            }
+            else if (dto.MagazinesPrices.TryGetValue(MagazineType.Right, out int rightPrice))
+            {
+                _view.RightMoneyPoint.gameObject.SetActive(true);
+                _view.RightMoneyText.text = rightPrice.ToString();
+                _uiRightMoneyTarget = dto.RightTransform;
+            }
         }
 
         private void ShowStonesProgress(bool isActive)
