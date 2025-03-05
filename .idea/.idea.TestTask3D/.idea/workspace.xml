@@ -20,21 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4417b480-fafb-47dc-a4bd-95e71ff7d911" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/StonesProgressDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/StonesProgressDto.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/DeleteSaveFile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/DeleteSaveFile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/SaveDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/SaveDto.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Enums/CallbackType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Enums/CallbackType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/JsonsSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/JsonsSettings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/MoneySettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/MoneySettings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTask3D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/BuildingElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/BuildingElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/GameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/GameSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LevelPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/LevelPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/PlayerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/PlayerPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/LevelService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/LevelService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Prefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Main UI Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Main UI Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/GameSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/GameSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Game/Shared/Windows/MainUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E21EF1AD-5A5E-4C73-A204-8DAC84671E33/d9/1f499fdc/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -68,7 +73,6 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Core/Infrastructure/GameFsm/GameStateMachineBase.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Animations/MoveAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/GameSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/StoneGettingElement.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/PlayerSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/PlayerView.cs" />
@@ -84,7 +88,6 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Infrastructure/GameFsm/States/MainGameState.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/WinView.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/WinPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Views/MainUiView.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/PlayerPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/LevelService.cs" />
@@ -93,6 +96,15 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/StonesProgressDto.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Presenters/MainUiPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Elements/MagazineElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Enums/CallbackType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Free Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Editor/DeleteSaveFile.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Infrastructure/MainInstallerMVP.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/JsonsSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/GameSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Settings/MoneySettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/Data/Dto/SaveDto.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Game/MVP/Presentation/Services/SaveLoadService.cs" />
       </list>
     </option>
   </component>
@@ -119,10 +131,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7564">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7564" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -139,6 +151,7 @@
       <updated>1740573129339</updated>
       <workItem from="1740573137322" duration="11276000" />
       <workItem from="1740663503108" duration="27498000" />
+      <workItem from="1741184214851" duration="2051000" />
     </task>
     <servers />
   </component>
@@ -235,9 +248,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740695980633" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1740701124681">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1741185726882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1740701124681" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1741185726882" />
   </component>
 </project>

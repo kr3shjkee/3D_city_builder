@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   <PlayerSettings>k__BackingField: {fileID: 11400000, guid: 48bd49efd52567e488b038b0f673f94c, type: 2}
+  <JsonsSettings>k__BackingField: {fileID: 11400000, guid: cec8807f0895d1d41b6cbe456e2f5c36, type: 2}
+  <MoneySettings>k__BackingField: {fileID: 11400000, guid: 74d709e9e70b787448dd3cb633ab9f1d, type: 2}

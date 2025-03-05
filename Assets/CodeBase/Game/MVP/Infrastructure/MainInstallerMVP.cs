@@ -47,6 +47,7 @@ namespace Game.MVP.Infrastructure
 
         private void BindServices()
         {
+            Container.BindInterfacesAndSelfTo<SaveLoadService>().AsSingle(); 
             Container.Bind<LevelService>().AsSingle(); 
         }
 

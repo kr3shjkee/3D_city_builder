@@ -90,6 +90,9 @@
               </e>
             </e>
           </e>
+          <e p="Editor" t="Include">
+            <e p="DeleteSaveFile.cs" t="Include" />
+          </e>
           <e p="Game" t="Include">
             <e p="Animations" t="Include">
               <e p="FillAnimation.cs" t="Include" />
@@ -98,14 +101,18 @@
             <e p="Data" t="Include">
               <e p="Dto" t="Include">
                 <e p="MagazineProgressDto.cs" t="Include" />
+                <e p="SaveDto.cs" t="Include" />
                 <e p="StonesProgressDto.cs" t="Include" />
               </e>
               <e p="Enums" t="Include">
                 <e p="BuildingStatus.cs" t="Include" />
+                <e p="CallbackType.cs" t="Include" />
                 <e p="MagazineType.cs" t="Include" />
               </e>
               <e p="Settings" t="Include">
                 <e p="GameSettings.cs" t="Include" />
+                <e p="JsonsSettings.cs" t="Include" />
+                <e p="MoneySettings.cs" t="Include" />
                 <e p="PlayerSettings.cs" t="Include" />
               </e>
             </e>
@@ -146,6 +153,7 @@
                 </e>
                 <e p="Services" t="Include">
                   <e p="LevelService.cs" t="Include" />
+                  <e p="SaveLoadService.cs" t="Include" />
                 </e>
                 <e p="Views" t="Include">
                   <e p="LevelView.cs" t="Include" />

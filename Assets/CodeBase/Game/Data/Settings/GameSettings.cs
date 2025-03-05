@@ -6,5 +6,7 @@ namespace Game.Data.Settings
     public class GameSettings : ScriptableObject
     {
         [field: SerializeField] public PlayerSettings PlayerSettings { get; private set; }
+        [field: SerializeField] public JsonsSettings JsonsSettings { get; private set; }
+        [field: SerializeField] public MoneySettings MoneySettings { get; private set; }
     }
 }
