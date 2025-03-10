@@ -700,6 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6946123663473538327}
   - component: {fileID: 2606237542417872441}
+  - component: {fileID: 4594095299528166853}
   m_Layer: 0
   m_Name: Money Show Trigger
   m_TagString: Untagged
@@ -716,7 +717,7 @@ Transform:
   m_GameObject: {fileID: 5772950025074848925}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96, y: -1.84, z: 2.46}
+  m_LocalPosition: {x: -3.25, y: -1.84, z: 2.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -741,8 +742,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 1, z: 7.77}
+  m_Size: {x: 3, y: 1, z: 7.77}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4594095299528166853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772950025074848925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa320b570dfc4bbc9f2a3e02e01c4fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <LeftPlace>k__BackingField: {fileID: 3806982150295051254}
+  <RightPlace>k__BackingField: {fileID: 5541219611775167762}
 --- !u!1 &6335577027462854990
 GameObject:
   m_ObjectHideFlags: 0

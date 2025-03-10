@@ -42,6 +42,7 @@ namespace Game.MVP.Presentation.Presenters
             _levelService.ShowProgressBar += ShowProgressBarAsync;
             _levelService.UpdateStonesProgress += UpdateStonesProgress;
             _levelService.ShowStonesProgress += ShowStonesProgress;
+            _levelService.ShowMoneyPrices += UpdateMoneyPrices;
         }
         
         public void Enable()
@@ -61,6 +62,7 @@ namespace Game.MVP.Presentation.Presenters
             _levelService.ShowProgressBar -= ShowProgressBarAsync;
             _levelService.UpdateStonesProgress -= UpdateStonesProgress;
             _levelService.ShowStonesProgress -= ShowStonesProgress;
+            _levelService.ShowMoneyPrices -= UpdateMoneyPrices;
             
             _cts?.Dispose();
             _cts = null;
@@ -71,6 +73,16 @@ namespace Game.MVP.Presentation.Presenters
             if (_uiStoneTarget != null && _view.StoneProgressPoint.gameObject.activeSelf)
             {
                 CalculatePosition(_uiStoneTarget.position, _view.StoneProgressPoint);
+            }
+            
+            if (_uiLeftMoneyTarget != null && _view.LeftMoneyPoint.gameObject.activeSelf)
+            {
+                CalculatePosition(_uiLeftMoneyTarget.position, _view.LeftMoneyPoint);
+            }
+            
+            if (_uiRightMoneyTarget != null && _view.RightMoneyPoint.gameObject.activeSelf)
+            {
+                CalculatePosition(_uiRightMoneyTarget.position, _view.RightMoneyPoint);
             }
         }
 
@@ -152,21 +164,25 @@ namespace Game.MVP.Presentation.Presenters
 
         private void UpdateMoneyPrices(MoneyPriceDto dto)
         {
-            if (dto == null)
+            int price;
+            if (dto == null || !dto.IsShow)
             {
                 _view.LeftMoneyPoint.gameObject.SetActive(false);
                 _view.RightMoneyPoint.gameObject.SetActive(false);
+                return;
             }
-            else if(dto.MagazinesPrices.TryGetValue(MagazineType.Left, out int leftPrice))
+            
+            if(_moneyService.GetMagazinePrice(MagazineType.Left, out price))
             {
                 _view.LeftMoneyPoint.gameObject.SetActive(true);
-                _view.LeftMoneyText.text = leftPrice.ToString();
+                _view.LeftMoneyText.text = price.ToString();
                 _uiLeftMoneyTarget = dto.LeftTransform;
             }
-            else if (dto.MagazinesPrices.TryGetValue(MagazineType.Right, out int rightPrice))
+            
+            if (_moneyService.GetMagazinePrice(MagazineType.Right, out price))
             {
                 _view.RightMoneyPoint.gameObject.SetActive(true);
-                _view.RightMoneyText.text = rightPrice.ToString();
+                _view.RightMoneyText.text = price.ToString();
                 _uiRightMoneyTarget = dto.RightTransform;
             }
         }

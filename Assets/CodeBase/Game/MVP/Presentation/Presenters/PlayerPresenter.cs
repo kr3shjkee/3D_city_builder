@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using Core.MVP.Presenters;
 using Cysharp.Threading.Tasks;
+using Game.Data.Dto;
+using Game.Data.Enums;
 using Game.Data.Settings;
 using Game.Elements;
 using Game.MVP.Presentation.Services;
@@ -91,6 +93,16 @@ namespace Game.MVP.Presentation.Presenters
                 magazineElement.ShowProgress(true, false);
                 _levelService.InvokeShowStonesProgress(true, magazineElement.Type);
             }
+            else if (collider.TryGetComponent(out MoneyShowElement moneyShowElement))
+            {
+                MoneyPriceDto dto = new MoneyPriceDto()
+                {
+                    LeftTransform = moneyShowElement.LeftPlace,
+                    RightTransform = moneyShowElement.RightPlace,
+                    IsShow = true
+                };
+                _levelService.InvokeShowMoneyPrices(dto);
+            }
         }
         
         private async void OnTriggerStayHandlerAsync(Collider collider)
@@ -127,6 +139,14 @@ namespace Game.MVP.Presentation.Presenters
             {
                 magazineElement.ShowProgress(false, false);
                 _levelService.InvokeShowStonesProgress(false, magazineElement.Type);
+            }
+            else if (collider.TryGetComponent(out MoneyShowElement moneyShowElement))
+            {
+                MoneyPriceDto dto = new MoneyPriceDto()
+                {
+                    IsShow = false
+                };
+                _levelService.InvokeShowMoneyPrices(dto);
             }
         }
     }

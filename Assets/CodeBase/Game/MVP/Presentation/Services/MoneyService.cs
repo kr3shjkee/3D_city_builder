@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using Game.Data.Enums;
 using Game.Data.Settings;
 using UnityEngine;
 using Zenject;
@@ -36,6 +38,19 @@ namespace Game.MVP.Presentation.Services
             _currentMoney -= value;
             _saveLoadService.SaveMoney(value, false);
             UpdateMoney?.Invoke(_currentMoney);
+        }
+
+        public bool GetMagazinePrice(MagazineType type, out int price)
+        {
+            bool isAvailable = false;
+            price = 0;
+            if (_saveLoadService.Dto.MagazinesInfo.Exists(item => item.Type == type))
+            {
+                var magazineInfo = _saveLoadService.Dto.MagazinesInfo.First(magazine => magazine.Type == type);
+                isAvailable = magazineInfo.IsBought;
+                price = _gameSettings.MoneySettings.BuildingPriceMultiplier * _saveLoadService.Dto.AllCompletedBuilds;
+            }
+            return !isAvailable;
         }
 
         public void Tick()

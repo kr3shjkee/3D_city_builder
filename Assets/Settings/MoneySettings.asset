@@ -15,4 +15,4 @@ MonoBehaviour:
   <BuildingPriceMultiplier>k__BackingField: 50
   <MoneyTickMultiplier>k__BackingField: 10
   <TickSeconds>k__BackingField: 5
-  <StartMoney>k__BackingField: 50
+  <StartMoney>k__BackingField: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Cysharp.Threading.Tasks;
+using Game.Data;
 using Game.Data.Dto;
 using Game.Data.Enums;
 using Game.Data.Settings;
@@ -62,10 +63,10 @@ namespace Game.MVP.Presentation.Services
             {
                 AllCompletedBuilds = 0,
                 Money = _gameSettings.MoneySettings.StartMoney,
-                MagazineCompletedBuilds = new Dictionary<MagazineType, int>
+                MagazinesInfo = new List<MagazineInfo>()
                 {
-                    {MagazineType.Left, 0},
-                    {MagazineType.Right, 0}
+                    new MagazineInfo(MagazineType.Left),
+                    new MagazineInfo(MagazineType.Right)
                 }
             };
 
