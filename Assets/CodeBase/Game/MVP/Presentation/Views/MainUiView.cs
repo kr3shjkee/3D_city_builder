@@ -22,5 +22,6 @@ namespace Game.MVP.Presentation.Views
         [field: SerializeField] public TMP_Text LeftMoneyText { get; private set; }
         [field: SerializeField] public TMP_Text RightMoneyText { get; private set; }
         [field: SerializeField] public TMP_Text MoneyCountText { get; private set; }
+        [field: SerializeField] public TMP_Text HaveNotMoneyText { get; private set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Game.Data;
 using Game.Data.Dto;
 using Game.Data.Enums;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace Game.Elements
     {
         [SerializeField] private MagazineType _type;
         [SerializeField] private List<BuildingElement> _buildingElements;
+        [SerializeField] private GameObject _doorObject;
 
         private BuildingStatus _status = BuildingStatus.NotBuilded;
         private BuildingElement _currentBuildingElement;
@@ -18,7 +20,8 @@ namespace Game.Elements
         public MagazineType Type => _type;
         public BuildingStatus Status => _status;
         public event Action<MagazineProgressDto, bool> InvokeShowMagazineProgress;
-        public event Action<StonesProgressDto> InvokeStonesProgress;
+        public event Action<MagazineType, StonesProgressDto> InvokeStonesProgress;
+        public event Action<MagazineType> InvokeFinishBuild;
 
         private void Awake()
         {
@@ -30,15 +33,30 @@ namespace Game.Elements
             UnsubscribeBuildingElements();
         }
 
-        public void Init()
+        public void Init(MagazineInfo info)
         {
             foreach (BuildingElement buildingElement in _buildingElements)
             {
                 buildingElement.Init();
                 buildingElement.gameObject.SetActive(false);
             }
-            _currentBuildingElement = _buildingElements[0];
-            _currentBuildingElement.gameObject.SetActive(true);
+            
+            SetDoorState(!info.IsBought);
+            for (int i = 0; i < _buildingElements.Count; i++)
+            {
+                if (i < info.CompletedBuilds)
+                {
+                    _buildingElements[i].gameObject.SetActive(true);
+                    _buildingElements[i].SetBuildingStatus(BuildingStatus.Builded);
+                }
+                else
+                {
+                    _buildingElements[i].gameObject.SetActive(true);
+                    _buildingElements[i].SetBuildedParts(info.CurrentBuildParts);
+                    _currentBuildingElement = _buildingElements[i];
+                    return;
+                }
+            }
         }
 
         public void BuildPart(int id)
@@ -64,8 +82,13 @@ namespace Game.Elements
             {
                 int needStones = _currentBuildingElement.NeedStones();
                 StonesProgressDto dto = new StonesProgressDto(needStones, _currentBuildingElement.BuyPlace);
-                InvokeStonesProgress?.Invoke(dto);
+                InvokeStonesProgress?.Invoke(Type, dto);
             }
+        }
+        
+        public void SetDoorState(bool isActive)
+        {
+            _doorObject.SetActive(isActive);
         }
         
         private void SubscribeBuildingElements()
@@ -92,11 +115,12 @@ namespace Game.Elements
                 if (_currentBuildingElement != null)
                 {
                     _currentBuildingElement.gameObject.SetActive(true);
+                    InvokeFinishBuild?.Invoke(Type);
                 }
                 else
                 {
                     _status = BuildingStatus.Builded;
-                    InvokeStonesProgress?.Invoke(null);
+                    InvokeStonesProgress?.Invoke(Type, null);
                 }
                 ShowProgress(true, true);
             }

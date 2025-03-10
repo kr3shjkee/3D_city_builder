@@ -121,6 +121,7 @@
             <e p="Elements" t="Include">
               <e p="BuildingElement.cs" t="Include" />
               <e p="BuildingPartElement.cs" t="Include" />
+              <e p="DoorTriggerElement.cs" t="Include" />
               <e p="MagazineElement.cs" t="Include" />
               <e p="MoneyShowElement.cs" t="Include" />
               <e p="StoneElement.cs" t="Include" />

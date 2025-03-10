@@ -12,11 +12,21 @@ namespace Game.MVP.Presentation.Presenters
     {
         private readonly LevelView _view;
         private readonly LevelService _levelService;
+        private readonly SaveLoadService _saveLoadService;
+        private readonly MoneyService _moneyService;
 
-        public LevelPresenter(LevelView view, LevelService levelService)
+        public LevelPresenter(
+            LevelView view, 
+            LevelService levelService, 
+            SaveLoadService saveLoadService,
+            MoneyService moneyService)
         {
             _view = view;
             _levelService = levelService;
+            _saveLoadService = saveLoadService;
+            _moneyService = moneyService;
+
+            _moneyService.OpenMagazine += OpenMagazine;
 
             _levelService.PrepareLevel += PrepareLevel;
             _levelService.BuildItem += BuildPart;
@@ -31,6 +41,8 @@ namespace Game.MVP.Presentation.Presenters
 
         public void Disable()
         {
+            _moneyService.OpenMagazine -= OpenMagazine;
+            
             _levelService.PrepareLevel -= PrepareLevel;
             _levelService.BuildItem -= BuildPart;
             _levelService.PrepareStonesProgress -= PrepareStonesProgress;
@@ -44,6 +56,7 @@ namespace Game.MVP.Presentation.Presenters
             {
                 magazine.InvokeShowMagazineProgress += ShowMagazineProgress;
                 magazine.InvokeStonesProgress += UpdateStonesProgress;
+                magazine.InvokeFinishBuild += SaveFinishedBuild;
             }
         }
 
@@ -53,15 +66,21 @@ namespace Game.MVP.Presentation.Presenters
             {
                 magazine.InvokeShowMagazineProgress -= ShowMagazineProgress;
                 magazine.InvokeStonesProgress -= UpdateStonesProgress;
+                magazine.InvokeFinishBuild -= SaveFinishedBuild;
             }
         }
 
         private void PrepareLevel()
         {
-            foreach (MagazineElement magazine in _view.MagazineElements)
-            {
-                magazine.Init();
-            }
+            var magazine =
+                _view.MagazineElements.FirstOrDefault(magazineLeft => magazineLeft.Type == MagazineType.Left);
+            if(magazine!=null)
+                magazine.Init(_saveLoadService.Dto.MagazinesInfo.FirstOrDefault(infoLeft => infoLeft.Type == MagazineType.Left));
+            
+            magazine = 
+                _view.MagazineElements.FirstOrDefault(magazineRight => magazineRight.Type == MagazineType.Right);
+            if(magazine!=null)
+                magazine.Init(_saveLoadService.Dto.MagazinesInfo.FirstOrDefault(infoRight => infoRight.Type == MagazineType.Right));
         }
 
         private void BuildPart(int id)
@@ -81,9 +100,20 @@ namespace Game.MVP.Presentation.Presenters
             }
         }
 
-        private void UpdateStonesProgress(StonesProgressDto dto)
+        private void UpdateStonesProgress(MagazineType type, StonesProgressDto dto)
         {
             _levelService.InvokeUpdateStonesProgress(dto);
+            
+            if(dto!=null)
+                _saveLoadService.SaveCurrentParts(type, dto.Count);
+            else
+                _saveLoadService.SaveCompleteMagazine(type);
+            
+        }
+
+        private void SaveFinishedBuild(MagazineType type)
+        {
+            _saveLoadService.SaveCompleteBuild(type);
         }
 
         private void PrepareStonesProgress(MagazineType type)
@@ -92,6 +122,14 @@ namespace Game.MVP.Presentation.Presenters
             
             if(magazineElement != null)
                 magazineElement.UpdateStonesProgress();
+        }
+
+        private void OpenMagazine(MagazineType type)
+        {
+            MagazineElement magazineElement = _view.MagazineElements.FirstOrDefault(item => item.Type == type);
+            
+            if(magazineElement != null)
+                magazineElement.SetDoorState(false);
         }
     }
 }

@@ -24,6 +24,8 @@ namespace Game.MVP.Presentation.Services
         }
 
         public event Action<int> UpdateMoney;
+        public event Action ShowHaveNotMoney;
+        public event Action<MagazineType> OpenMagazine;
 
         public void Init()
         {
@@ -33,22 +35,33 @@ namespace Game.MVP.Presentation.Services
             _isInited = true;
         }
 
-        public void BuyBuild(int value)
+        public void TryBuyBuild(MagazineType type)
         {
-            _currentMoney -= value;
-            _saveLoadService.SaveMoney(value, false);
-            UpdateMoney?.Invoke(_currentMoney);
+            int price = _gameSettings.MoneySettings.BuildingPriceMultiplier *
+                        _saveLoadService.Dto.AllBoughtMagazines;
+            if (_currentMoney >= price)
+            {
+                _currentMoney -= price;
+                _saveLoadService.SaveMoney(price, false);
+                _saveLoadService.BuyMagazine(type);
+                OpenMagazine?.Invoke(type);
+                UpdateMoney?.Invoke(_currentMoney);
+            }
+            else
+            {
+                ShowHaveNotMoney?.Invoke();
+            }
         }
 
         public bool GetMagazinePrice(MagazineType type, out int price)
         {
             bool isAvailable = false;
             price = 0;
-            if (_saveLoadService.Dto.MagazinesInfo.Exists(item => item.Type == type))
+            var magazineInfo = _saveLoadService.Dto.MagazinesInfo.First(magazine => magazine.Type == type);
+            if (magazineInfo!=null)
             {
-                var magazineInfo = _saveLoadService.Dto.MagazinesInfo.First(magazine => magazine.Type == type);
                 isAvailable = magazineInfo.IsBought;
-                price = _gameSettings.MoneySettings.BuildingPriceMultiplier * _saveLoadService.Dto.AllCompletedBuilds;
+                price = _gameSettings.MoneySettings.BuildingPriceMultiplier * _saveLoadService.Dto.AllBoughtMagazines;
             }
             return !isAvailable;
         }

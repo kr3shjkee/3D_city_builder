@@ -4,7 +4,6 @@ using System.Threading;
 using Core.MVP.Presenters;
 using Cysharp.Threading.Tasks;
 using Game.Data.Dto;
-using Game.Data.Enums;
 using Game.Data.Settings;
 using Game.Elements;
 using Game.MVP.Presentation.Services;
@@ -18,6 +17,7 @@ namespace Game.MVP.Presentation.Presenters
     {
         private readonly PlayerView _view;
         private readonly LevelService _levelService;
+        private readonly MoneyService _moneyService;
         
         private readonly string _groundedString = "Grounded";
         private readonly string _moveSpeedString = "MoveSpeed";
@@ -33,10 +33,12 @@ namespace Game.MVP.Presentation.Presenters
             PlayerView view, 
             GameSettings settings, 
             LevelService levelService, 
+            MoneyService moneyService,
             StoneElement.Pool stonesPool)
         {
             _view = view;
             _levelService = levelService;
+            _moneyService = moneyService;
             _stonesPool = stonesPool;
             _settings = settings.PlayerSettings;
             _stones = new Stack<StoneElement>();
@@ -102,6 +104,10 @@ namespace Game.MVP.Presentation.Presenters
                     IsShow = true
                 };
                 _levelService.InvokeShowMoneyPrices(dto);
+            }
+            else if (collider.TryGetComponent(out DoorTriggerElement doorTriggerElement))
+            {
+                _moneyService.TryBuyBuild(doorTriggerElement.Type);
             }
         }
         

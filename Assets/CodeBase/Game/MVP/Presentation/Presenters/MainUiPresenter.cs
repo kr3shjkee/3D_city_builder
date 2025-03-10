@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using Core.Infrastructure.WindowsFsm;
 using Core.MVP.Presenters;
+using Cysharp.Threading.Tasks;
 using Game.Data.Dto;
 using Game.Data.Enums;
 using Game.MVP.Presentation.Services;
@@ -37,6 +38,7 @@ namespace Game.MVP.Presentation.Presenters
             _windowFsm = windowFsm;
 
             _moneyService.UpdateMoney += UpdateMoneyCounter;
+            _moneyService.ShowHaveNotMoney += ShowHaveNotMoneyMessage;
 
             _levelService.UpdateStonesCount += UpdateStonesCount;
             _levelService.ShowProgressBar += ShowProgressBarAsync;
@@ -57,6 +59,7 @@ namespace Game.MVP.Presentation.Presenters
             _windowFsm.Closed -= OnHandleCloseWindow;
             
             _moneyService.UpdateMoney -= UpdateMoneyCounter;
+            _moneyService.ShowHaveNotMoney -= ShowHaveNotMoneyMessage;
             
             _levelService.UpdateStonesCount -= UpdateStonesCount;
             _levelService.ShowProgressBar -= ShowProgressBarAsync;
@@ -190,6 +193,26 @@ namespace Game.MVP.Presentation.Presenters
         private void ShowStonesProgress(bool isActive)
         {
             _view.StoneProgressPoint.gameObject.SetActive(isActive);
+        }
+
+        private async void ShowHaveNotMoneyMessage()
+        {
+            try
+            {
+                _cts = new CancellationTokenSource();
+                _view.HaveNotMoneyText.gameObject.SetActive(true);
+                await UniTask.Delay(TimeSpan.FromSeconds(2), false, PlayerLoopTiming.Update, _cts.Token);
+            }
+            catch (OperationCanceledException e)
+            {
+                
+            }
+            finally
+            {
+                _view.HaveNotMoneyText.gameObject.SetActive(false);
+                _cts?.Dispose();
+                _cts = null;
+            }
         }
     }
 }

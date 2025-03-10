@@ -67,6 +67,24 @@ namespace Game.Elements
             return _buildObjects.Count(item => item.Status == BuildingStatus.NotBuilded);
         }
 
+        public void SetBuildedParts(int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                BuildPart();
+            }
+        }
+
+        public void SetBuildingStatus(BuildingStatus status)
+        {
+            _buyPlace.SetActive(false);
+            _status = status;
+            for (int i = 0; i < _buildObjects.Count; i++)
+            {
+                BuildPart();
+            }
+        }
+
         private void InvokeUpdateCounts()
         {
             int allCount = _buildObjects.Count;

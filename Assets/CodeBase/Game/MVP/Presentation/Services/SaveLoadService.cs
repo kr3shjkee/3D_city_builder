@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using Game.Data;
 using Game.Data.Dto;
@@ -56,28 +56,7 @@ namespace Game.MVP.Presentation.Services
             callback?.Invoke(CallbackType.Loading);
             _isLoadingFinish = true;
         }
-
-        private void CreateNewDto()
-        {
-            _dto = new SaveDto
-            {
-                AllCompletedBuilds = 0,
-                Money = _gameSettings.MoneySettings.StartMoney,
-                MagazinesInfo = new List<MagazineInfo>()
-                {
-                    new MagazineInfo(MagazineType.Left),
-                    new MagazineInfo(MagazineType.Right)
-                }
-            };
-
-            SaveData();
-        }
-
-        private void SaveData()
-        {
-            File.WriteAllText(_filePath, JsonUtility.ToJson(_dto));
-        }
-
+        
         public void SaveMoney(int value, bool isPlus)
         {
             if (isPlus)
@@ -86,6 +65,77 @@ namespace Game.MVP.Presentation.Services
                 _dto.Money -= value;
             
             SaveData();
+        }
+
+        public void BuyMagazine(MagazineType type)
+        {
+            _dto.AllBoughtMagazines++;
+            var magazine = _dto.MagazinesInfo.FirstOrDefault(item => item.Type.ToString() == type.ToString());
+            if (magazine != null)
+            {
+                magazine.IsBought = true;
+            }
+            SaveData();
+        }
+
+        public void SaveCurrentParts(MagazineType type, int count)
+        {
+            var magazine = _dto.MagazinesInfo.FirstOrDefault(item => item.Type.ToString() == type.ToString());
+            if (magazine != null)
+            {
+                magazine.CurrentBuildParts = count;
+            } 
+            SaveData();
+        }
+
+        public void SaveCompleteMagazine(MagazineType type)
+        {
+            _dto.AllCompletedBuilds++;
+            var magazine = _dto.MagazinesInfo.FirstOrDefault(item => item.Type.ToString() == type.ToString());
+            if (magazine != null)
+            {
+                magazine.CurrentBuildParts = 0;
+                magazine.CompletedBuilds = 0;
+                magazine.IsBought = false;
+            }
+            SaveData();
+        }
+
+        public void SaveCompleteBuild(MagazineType type)
+        {
+            _dto.AllCompletedBuilds++;
+            var magazine = _dto.MagazinesInfo.FirstOrDefault(item => item.Type.ToString() == type.ToString());
+            if (magazine != null)
+            {
+                magazine.CurrentBuildParts = 0;
+                magazine.CompletedBuilds = 1;
+            }
+            SaveData();
+        }
+
+        private void CreateNewDto()
+        {
+            MagazineInfo[] magazineInfo = new MagazineInfo[]
+            {
+                new MagazineInfo(MagazineType.Left),
+                new MagazineInfo(MagazineType.Right)
+            };
+            // magazineInfo[0].Type = MagazineType.Left;
+            // magazineInfo[1].Type = MagazineType.Right;
+            
+            _dto = new SaveDto
+            {
+                AllCompletedBuilds = 0,
+                Money = _gameSettings.MoneySettings.StartMoney,
+                MagazinesInfo = magazineInfo
+            };
+
+            SaveData();
+        }
+
+        private void SaveData()
+        {
+            File.WriteAllText(_filePath, JsonUtility.ToJson(_dto)); ;
         }
     }
 }

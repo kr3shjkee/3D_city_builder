@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 7286829619735058888}
   - component: {fileID: 8173220331143683668}
   - component: {fileID: 2299086767969015435}
+  - component: {fileID: 8212982213271078882}
   m_Layer: 0
   m_Name: Buy Place
   m_TagString: Untagged
@@ -364,6 +365,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 100, z: 1.0000002}
   m_Center: {x: 0, y: 50, z: 0}
+--- !u!114 &8212982213271078882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671418653464627603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8924f9d69cab4ff38f955670608881af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField: 2
 --- !u!1 &2738864750115329860
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +825,7 @@ MonoBehaviour:
   _buildingElements:
   - {fileID: 6303099308927577880}
   - {fileID: 8851459153055163422}
+  _doorObject: {fileID: 8685476227325079527}
 --- !u!65 &4029613026048355743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -885,6 +900,7 @@ GameObject:
   - component: {fileID: 5671664622484757020}
   - component: {fileID: 4063220281197609152}
   - component: {fileID: 18070054586991344}
+  - component: {fileID: 8501163417274117870}
   m_Layer: 0
   m_Name: Buy Place
   m_TagString: Untagged
@@ -978,6 +994,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 100, z: 1.0000002}
   m_Center: {x: 0, y: 50, z: 0}
+--- !u!114 &8501163417274117870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496542098616920812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8924f9d69cab4ff38f955670608881af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField: 1
 --- !u!1 &8685476227325079527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1126,7 @@ MonoBehaviour:
   _buildingElements:
   - {fileID: 4451757083307756187}
   - {fileID: 7831393071861225134}
+  _doorObject: {fileID: 4703673397829884630}
 --- !u!65 &279445291887154244
 BoxCollider:
   m_ObjectHideFlags: 0
