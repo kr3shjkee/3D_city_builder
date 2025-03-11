@@ -35,6 +35,12 @@ namespace Game.Elements
             }
         }
 
+        public void Build(Vector3 position)
+        {
+            _status = BuildingStatus.Builded;
+            transform.localPosition = position;
+        }
+
         private void OnDestroy()
         {
             _cts?.Dispose();

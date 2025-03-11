@@ -44,7 +44,7 @@ namespace Game.Elements
             InvokeUpdateCounts();
         }
 
-        public void BuildPart()
+        public void BuildPart(bool isAsync)
         {
             BuildingPartElement element =
                 _buildObjects.FirstOrDefault(item => item.Status == BuildingStatus.NotBuilded);
@@ -52,8 +52,14 @@ namespace Game.Elements
             if (element != null)
             {
                 int index = _buildObjects.IndexOf(element);
-                element.BuildAsync(_positions[index]);
-                InvokeUpdateCounts();
+                if (isAsync)
+                {
+                    element.BuildAsync(_positions[index]);
+                    InvokeUpdateCounts();
+                }
+                    
+                else
+                    element.Build(_positions[index]);
             }
         }
 
@@ -67,11 +73,16 @@ namespace Game.Elements
             return _buildObjects.Count(item => item.Status == BuildingStatus.NotBuilded);
         }
 
+        public int MaxStones()
+        {
+            return _buildObjects.Count;
+        }
+
         public void SetBuildedParts(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                BuildPart();
+                BuildPart(false);
             }
         }
 
@@ -81,7 +92,7 @@ namespace Game.Elements
             _status = status;
             for (int i = 0; i < _buildObjects.Count; i++)
             {
-                BuildPart();
+                BuildPart(false);
             }
         }
 

@@ -37,6 +37,10 @@ namespace Game.MVP.Presentation.Services
 
         public void TryBuyBuild(MagazineType type)
         {
+            var magazineInfo = _saveLoadService.Dto.MagazinesInfo.FirstOrDefault(item => item.Type == type);
+            if(magazineInfo==null || magazineInfo.IsBought)
+                return;
+            
             int price = _gameSettings.MoneySettings.BuildingPriceMultiplier *
                         _saveLoadService.Dto.AllBoughtMagazines;
             if (_currentMoney >= price)

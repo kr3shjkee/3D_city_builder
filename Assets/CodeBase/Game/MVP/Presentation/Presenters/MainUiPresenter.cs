@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading;
 using Core.Infrastructure.WindowsFsm;
 using Core.MVP.Presenters;
@@ -17,6 +18,7 @@ namespace Game.MVP.Presentation.Presenters
     {
         private readonly LevelService _levelService;
         private readonly MoneyService _moneyService;
+        private readonly SaveLoadService _saveLoadService;
         private readonly MainUiView _view;
         private readonly IWindowFsm _windowFsm;
         private readonly Type _window = typeof(MainUi);
@@ -30,15 +32,18 @@ namespace Game.MVP.Presentation.Presenters
             MainUiView view, 
             LevelService levelService, 
             MoneyService moneyService,
+            SaveLoadService saveLoadService,
             IWindowFsm windowFsm)
         {
             _view = view; 
             _levelService = levelService;
             _moneyService = moneyService;
+            _saveLoadService = saveLoadService;
             _windowFsm = windowFsm;
 
             _moneyService.UpdateMoney += UpdateMoneyCounter;
             _moneyService.ShowHaveNotMoney += ShowHaveNotMoneyMessage;
+            _moneyService.OpenMagazine += UpdateMagazine;
 
             _levelService.UpdateStonesCount += UpdateStonesCount;
             _levelService.ShowProgressBar += ShowProgressBarAsync;
@@ -60,6 +65,7 @@ namespace Game.MVP.Presentation.Presenters
             
             _moneyService.UpdateMoney -= UpdateMoneyCounter;
             _moneyService.ShowHaveNotMoney -= ShowHaveNotMoneyMessage;
+            _moneyService.OpenMagazine -= UpdateMagazine;
             
             _levelService.UpdateStonesCount -= UpdateStonesCount;
             _levelService.ShowProgressBar -= ShowProgressBarAsync;
@@ -161,13 +167,12 @@ namespace Game.MVP.Presentation.Presenters
                 return;
             }
             
-            _view.StoneProgressText.text = dto.Count.ToString();
+            _view.StoneProgressText.text = dto.NeedStones.ToString();
             _uiStoneTarget = dto.Target;
         }
 
         private void UpdateMoneyPrices(MoneyPriceDto dto)
         {
-            int price;
             if (dto == null || !dto.IsShow)
             {
                 _view.LeftMoneyPoint.gameObject.SetActive(false);
@@ -175,18 +180,39 @@ namespace Game.MVP.Presentation.Presenters
                 return;
             }
             
-            if(_moneyService.GetMagazinePrice(MagazineType.Left, out price))
+            _uiLeftMoneyTarget = dto.LeftTransform;
+            _uiRightMoneyTarget = dto.RightTransform;
+
+            UpdateMagazine();
+        }
+
+        private void UpdateMagazine(MagazineType type = default)
+        {
+            int price;
+            var magazineInfo = _saveLoadService.Dto.MagazinesInfo.FirstOrDefault(item => item.Type == MagazineType.Left);
+            
+            if(_moneyService.GetMagazinePrice(MagazineType.Left, out price) && magazineInfo!= null && !magazineInfo.IsBought)
             {
                 _view.LeftMoneyPoint.gameObject.SetActive(true);
                 _view.LeftMoneyText.text = price.ToString();
-                _uiLeftMoneyTarget = dto.LeftTransform;
+            }
+            else
+            {
+                _view.LeftMoneyPoint.gameObject.SetActive(false);
+                _uiLeftMoneyTarget = null;
             }
             
-            if (_moneyService.GetMagazinePrice(MagazineType.Right, out price))
+            magazineInfo = _saveLoadService.Dto.MagazinesInfo.FirstOrDefault(item => item.Type == MagazineType.Right);
+
+            if (_moneyService.GetMagazinePrice(MagazineType.Right, out price) && magazineInfo != null && !magazineInfo.IsBought)
             {
                 _view.RightMoneyPoint.gameObject.SetActive(true);
                 _view.RightMoneyText.text = price.ToString();
-                _uiRightMoneyTarget = dto.RightTransform;
+            }
+            else
+            {
+                _view.RightMoneyPoint.gameObject.SetActive(false);
+                _uiRightMoneyTarget = null;
             }
         }
 

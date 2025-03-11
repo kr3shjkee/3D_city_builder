@@ -120,9 +120,7 @@ namespace Game.MVP.Presentation.Services
                 new MagazineInfo(MagazineType.Left),
                 new MagazineInfo(MagazineType.Right)
             };
-            // magazineInfo[0].Type = MagazineType.Left;
-            // magazineInfo[1].Type = MagazineType.Right;
-            
+
             _dto = new SaveDto
             {
                 AllCompletedBuilds = 0,

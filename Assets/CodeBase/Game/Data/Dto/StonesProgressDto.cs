@@ -4,12 +4,14 @@ namespace Game.Data.Dto
 {
     public class StonesProgressDto
     {
-        public readonly int Count;
+        public readonly int NeedStones;
+        public readonly int MaxStones;
         public readonly Transform Target;
 
-        public StonesProgressDto(int count, Transform target)
+        public StonesProgressDto(int needStones, int maxStone, Transform target)
         {
-            Count = count;
+            NeedStones = needStones;
+            MaxStones = maxStone;
             Target = target;
         }
     }

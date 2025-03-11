@@ -105,7 +105,7 @@ namespace Game.MVP.Presentation.Presenters
             _levelService.InvokeUpdateStonesProgress(dto);
             
             if(dto!=null)
-                _saveLoadService.SaveCurrentParts(type, dto.Count);
+                _saveLoadService.SaveCurrentParts(type, dto.MaxStones - dto.NeedStones);
             else
                 _saveLoadService.SaveCompleteMagazine(type);
             

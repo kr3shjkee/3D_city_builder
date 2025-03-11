@@ -64,7 +64,7 @@ namespace Game.Elements
             BuildingElement buildingElement = _buildingElements.FirstOrDefault(item => item.ID == id);
             if (buildingElement != null)
             {
-                buildingElement.BuildPart();
+                buildingElement.BuildPart(true);
             }
         }
 
@@ -81,7 +81,9 @@ namespace Game.Elements
             if (_currentBuildingElement != null)
             {
                 int needStones = _currentBuildingElement.NeedStones();
-                StonesProgressDto dto = new StonesProgressDto(needStones, _currentBuildingElement.BuyPlace);
+                StonesProgressDto dto = new StonesProgressDto(needStones, 
+                    _currentBuildingElement.MaxStones(), 
+                    _currentBuildingElement.BuyPlace);
                 InvokeStonesProgress?.Invoke(Type, dto);
             }
         }
