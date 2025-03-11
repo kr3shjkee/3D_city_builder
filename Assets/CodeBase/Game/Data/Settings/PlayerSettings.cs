@@ -6,7 +6,6 @@ namespace Game.Data.Settings
     public class PlayerSettings : ScriptableObject
     {
         [field: SerializeField] public float MoveSpeed { get; private set; }
-        [field: SerializeField] public Vector3 StartPosition { get; private set; }
         [field: SerializeField] public int MaxElementsCount { get; private set; }
         [field: SerializeField] public float ElementsOffset { get; private set; }
         [field: SerializeField] public float Delay { get; private set; }

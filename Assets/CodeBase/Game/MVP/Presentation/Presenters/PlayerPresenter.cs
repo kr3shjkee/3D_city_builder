@@ -84,8 +84,6 @@ namespace Game.MVP.Presentation.Presenters
                 StoneElement stoneElement = _stones.Pop();
                 _stonesPool.Despawn(stoneElement);
             }
-
-            _view.transform.localPosition = _settings.StartPosition;
         }
 
         private void OnTriggerEnterHandler(Collider collider)
@@ -108,6 +106,11 @@ namespace Game.MVP.Presentation.Presenters
             else if (collider.TryGetComponent(out DoorTriggerElement doorTriggerElement))
             {
                 _moneyService.TryBuyBuild(doorTriggerElement.Type);
+            }
+            else if (collider.TryGetComponent(out ChangeLevelTriggerElement changeLevelTriggerElement))
+            {
+                Debug.Log("CHANGE LEVEL!!!!");
+                //TODO: update level logic
             }
         }
         

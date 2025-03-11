@@ -8,5 +8,6 @@ namespace Game.Data.Settings
         [field: SerializeField] public PlayerSettings PlayerSettings { get; private set; }
         [field: SerializeField] public JsonsSettings JsonsSettings { get; private set; }
         [field: SerializeField] public MoneySettings MoneySettings { get; private set; }
+        [field: SerializeField] public LevelSettings LevelSettings { get; private set; }
     }
 }

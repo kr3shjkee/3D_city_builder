@@ -81,6 +81,8 @@ namespace Game.MVP.Presentation.Presenters
                 _view.MagazineElements.FirstOrDefault(magazineRight => magazineRight.Type == MagazineType.Right);
             if(magazine!=null)
                 magazine.Init(_saveLoadService.Dto.MagazinesInfo.FirstOrDefault(infoRight => infoRight.Type == MagazineType.Right));
+            
+            _view.BlockObject.SetActive(!_saveLoadService.Dto.CurrentLevelFinished);
         }
 
         private void BuildPart(int id)
@@ -96,19 +98,20 @@ namespace Game.MVP.Presentation.Presenters
             _levelService.InvokeShowProgressBar(dto,isAnimation);
             if (_view.MagazineElements.All(item => item.Status == BuildingStatus.Builded))
             {
-                _levelService.InvokeWinGame();
+                _saveLoadService.SaveFinishedLevel();
+                _view.BlockObject.SetActive(false);
             }
         }
 
         private void UpdateStonesProgress(MagazineType type, StonesProgressDto dto)
         {
             _levelService.InvokeUpdateStonesProgress(dto);
-            
-            if(dto!=null)
+
+            if (dto != null)
                 _saveLoadService.SaveCurrentParts(type, dto.MaxStones - dto.NeedStones);
             else
-                _saveLoadService.SaveCompleteMagazine(type);
-            
+                SaveFinishedBuild(type);
+
         }
 
         private void SaveFinishedBuild(MagazineType type)

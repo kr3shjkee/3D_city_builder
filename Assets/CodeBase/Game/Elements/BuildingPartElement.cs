@@ -27,6 +27,7 @@ namespace Game.Elements
             catch (OperationCanceledException e)
             {
                 transform.localPosition = position;
+                Debug.Log($"Operation Cancelled:\n{e}");
             }
             finally
             {

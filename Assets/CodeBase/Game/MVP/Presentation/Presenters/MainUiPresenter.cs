@@ -149,6 +149,7 @@ namespace Game.MVP.Presentation.Presenters
                 catch (OperationCanceledException e)
                 {
                     _view.ProgressBarFillImage.fillAmount = fill;
+                    Debug.Log($"Operation Cancelled:\n{e}");
                 }
                 finally
                 {
@@ -216,8 +217,11 @@ namespace Game.MVP.Presentation.Presenters
             }
         }
 
-        private void ShowStonesProgress(bool isActive)
+        private void ShowStonesProgress(bool isActive, MagazineType type = default)
         {
+            var info = _saveLoadService.Dto.MagazinesInfo.FirstOrDefault(item => item.Type == type);
+            if(info!=null && info.CompletedBuilds >=2 && isActive)
+                return;
             _view.StoneProgressPoint.gameObject.SetActive(isActive);
         }
 
@@ -231,7 +235,7 @@ namespace Game.MVP.Presentation.Presenters
             }
             catch (OperationCanceledException e)
             {
-                
+                Debug.Log($"Operation Cancelled:\n{e}");
             }
             finally
             {

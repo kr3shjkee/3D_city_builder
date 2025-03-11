@@ -8,5 +8,6 @@ namespace Game.MVP.Presentation.Views
     public class LevelView : ViewBase
     {
         [field: SerializeField] public List<MagazineElement> MagazineElements { get; private set; }
+        [field: SerializeField] public GameObject BlockObject { get; private set; }
     }
 }

@@ -23,7 +23,6 @@ namespace Game.MVP.Infrastructure
                 .ConstructView<MainUiView, MainUiPresenter>()
                 .ConstructView<PlayerView, PlayerPresenter>()
                 .ConstructView<LevelView, LevelPresenter>()
-                .ConstructView<WinView, WinPresenter>()
                 .ConstructView<LoadingView, LoadingPresenter>();
             
             return default;

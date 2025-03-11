@@ -57,6 +57,12 @@ namespace Game.Elements
                     return;
                 }
             }
+
+            if (_buildingElements.All(item => item.Status == BuildingStatus.Builded))
+            {
+                _currentBuildingElement = null;
+                _status = BuildingStatus.Builded;
+            }
         }
 
         public void BuildPart(int id)

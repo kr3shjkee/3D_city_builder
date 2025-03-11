@@ -7,5 +7,6 @@ namespace Game.Data.Dto
         public int AllBoughtMagazines;
         public int Money;
         public MagazineInfo[] MagazinesInfo;
+        public bool CurrentLevelFinished;
     }
 }

@@ -114,6 +114,7 @@
               <e p="Settings" t="Include">
                 <e p="GameSettings.cs" t="Include" />
                 <e p="JsonsSettings.cs" t="Include" />
+                <e p="LevelSettings.cs" t="Include" />
                 <e p="MoneySettings.cs" t="Include" />
                 <e p="PlayerSettings.cs" t="Include" />
               </e>
@@ -121,6 +122,7 @@
             <e p="Elements" t="Include">
               <e p="BuildingElement.cs" t="Include" />
               <e p="BuildingPartElement.cs" t="Include" />
+              <e p="ChangeLevelTriggerElement.cs" t="Include" />
               <e p="DoorTriggerElement.cs" t="Include" />
               <e p="MagazineElement.cs" t="Include" />
               <e p="MoneyShowElement.cs" t="Include" />
@@ -154,7 +156,6 @@
                   <e p="LoadingPresenter.cs" t="Include" />
                   <e p="MainUiPresenter.cs" t="Include" />
                   <e p="PlayerPresenter.cs" t="Include" />
-                  <e p="WinPresenter.cs" t="Include" />
                 </e>
                 <e p="Services" t="Include">
                   <e p="LevelService.cs" t="Include" />
@@ -167,7 +168,6 @@
                   <e p="LoadingView.cs" t="Include" />
                   <e p="MainUiView.cs" t="Include" />
                   <e p="PlayerView.cs" t="Include" />
-                  <e p="WinView.cs" t="Include" />
                 </e>
               </e>
             </e>
@@ -175,7 +175,6 @@
               <e p="Windows" t="Include">
                 <e p="Loading.cs" t="Include" />
                 <e p="MainUi.cs" t="Include" />
-                <e p="Win.cs" t="Include" />
               </e>
             </e>
           </e>

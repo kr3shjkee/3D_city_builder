@@ -88,16 +88,9 @@ namespace Game.MVP.Presentation.Services
             SaveData();
         }
 
-        public void SaveCompleteMagazine(MagazineType type)
+        public void SaveFinishedLevel()
         {
-            _dto.AllCompletedBuilds++;
-            var magazine = _dto.MagazinesInfo.FirstOrDefault(item => item.Type.ToString() == type.ToString());
-            if (magazine != null)
-            {
-                magazine.CurrentBuildParts = 0;
-                magazine.CompletedBuilds = 0;
-                magazine.IsBought = false;
-            }
+            _dto.CurrentLevelFinished = true;
             SaveData();
         }
 
@@ -108,7 +101,7 @@ namespace Game.MVP.Presentation.Services
             if (magazine != null)
             {
                 magazine.CurrentBuildParts = 0;
-                magazine.CompletedBuilds = 1;
+                magazine.CompletedBuilds++;
             }
             SaveData();
         }
@@ -125,7 +118,8 @@ namespace Game.MVP.Presentation.Services
             {
                 AllCompletedBuilds = 0,
                 Money = _gameSettings.MoneySettings.StartMoney,
-                MagazinesInfo = magazineInfo
+                MagazinesInfo = magazineInfo,
+                CurrentLevelFinished = false
             };
 
             SaveData();

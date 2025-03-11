@@ -20,7 +20,7 @@ namespace Game.MVP.Presentation.Services
         public event Action<int> BuildItem;
         public event Action<MagazineProgressDto, bool> ShowProgressBar;
         public event Action<StonesProgressDto> UpdateStonesProgress;
-        public event Action<bool> ShowStonesProgress;
+        public event Action<bool, MagazineType> ShowStonesProgress;
         public event Action<MagazineType> PrepareStonesProgress;
         public event Action<MoneyPriceDto> ShowMoneyPrices;
 
@@ -55,13 +55,7 @@ namespace Game.MVP.Presentation.Services
             if(isActive)
                 PrepareStonesProgress?.Invoke(type);
             
-            ShowStonesProgress?.Invoke(isActive);
-        }
-
-        public void InvokeWinGame()
-        {
-            _windowFsm.CloseWindow(typeof(MainUi));
-            _windowFsm.OpenWindow(typeof(Win), false);
+            ShowStonesProgress?.Invoke(isActive, type);
         }
 
         public void InvokeShowMoneyPrices(MoneyPriceDto dto)
