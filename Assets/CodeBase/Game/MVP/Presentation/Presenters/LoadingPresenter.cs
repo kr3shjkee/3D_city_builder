@@ -11,7 +11,7 @@ namespace Game.MVP.Presentation.Presenters
         private readonly IWindowFsm _windowFsm;
         private readonly LoadingView _view;
         private readonly Type _window = typeof(Loading);
-        
+
         public LoadingPresenter(IWindowFsm windowFsm, LoadingView view)
         {
             _windowFsm = windowFsm;
@@ -35,6 +35,7 @@ namespace Game.MVP.Presentation.Presenters
             if(_window != window || _view == null) return;
             
             _view.Show();
+            _view.Animation.DoRotateAnimation();
         }
         
         private void OnHandleCloseWindow(Type window)

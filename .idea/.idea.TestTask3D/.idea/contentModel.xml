@@ -97,6 +97,7 @@
             <e p="Animations" t="Include">
               <e p="FillAnimation.cs" t="Include" />
               <e p="MoveAnimation.cs" t="Include" />
+              <e p="RotateAnimation.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
               <e p="Dto" t="Include">
