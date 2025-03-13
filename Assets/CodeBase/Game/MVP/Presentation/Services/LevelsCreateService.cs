@@ -73,8 +73,9 @@ namespace Game.MVP.Presentation.Services
             levelView.RemovePresenter();
             levelView.Destroy();
             
-            IPresenter presenter = new LevelPresenter((LevelView)levelView, _levelService, _saveLoadService, _moneyService);
+            
             levelView = _levels.Peek();
+            IPresenter presenter = new LevelPresenter((LevelView)levelView, _levelService, _saveLoadService, _moneyService);
             levelView.Construct(presenter);
             
             int index = _levels.Count+1;
