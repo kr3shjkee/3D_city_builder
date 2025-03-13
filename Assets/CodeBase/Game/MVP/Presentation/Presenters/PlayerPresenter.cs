@@ -109,8 +109,8 @@ namespace Game.MVP.Presentation.Presenters
             }
             else if (collider.TryGetComponent(out ChangeLevelTriggerElement changeLevelTriggerElement))
             {
-                Debug.Log("CHANGE LEVEL!!!!");
-                //TODO: update level logic
+                changeLevelTriggerElement.gameObject.SetActive(false);
+                _levelService.InvokerPrepareNewLevel();
             }
         }
         

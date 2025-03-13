@@ -22,7 +22,6 @@ namespace Game.MVP.Infrastructure
             _sceneContainer
                 .ConstructView<MainUiView, MainUiPresenter>()
                 .ConstructView<PlayerView, PlayerPresenter>()
-                .ConstructView<LevelView, LevelPresenter>()
                 .ConstructView<LoadingView, LoadingPresenter>();
             
             return default;

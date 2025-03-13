@@ -25,6 +25,7 @@ namespace Game.MVP.Infrastructure
         {
             BindSettings();
             BindPools();
+            BindFactories();
             BindServices();
             BindViews();
             BindPresenters();
@@ -45,19 +46,26 @@ namespace Game.MVP.Infrastructure
                 .UnderTransformGroup("Stone Elements Pool");
         }
 
+        private void BindFactories()
+        {
+            Container
+                .BindFactory<LevelView, LevelView.Factory>()
+                .FromComponentInNewPrefab(_levelView);
+        }
+
         private void BindServices()
         {
             Container.BindInterfacesAndSelfTo<SaveLoadService>().AsSingle(); 
             Container.BindInterfacesAndSelfTo<MoneyService>().AsSingle(); 
             Container.Bind<LevelService>().AsSingle(); 
             Container.Bind<TimerService>().AsSingle();
+            Container.Bind<LevelsCreateService>().AsSingle(); 
         }
 
         private void BindViews()
         {
             Container.BindInstance(_mainUiView);
             Container.BindInstance(_playerView);
-            Container.BindInstance(_levelView);
             Container.BindInstance(_loadingView);
         }
 
@@ -65,7 +73,6 @@ namespace Game.MVP.Infrastructure
         {
             Container.BindInterfacesAndSelfTo<MainUiPresenter>().AsTransient();
             Container.BindInterfacesAndSelfTo<PlayerPresenter>().AsTransient();
-            Container.Bind<LevelPresenter>().AsTransient();
             Container.Bind<LoadingPresenter>().AsTransient();
         }
 

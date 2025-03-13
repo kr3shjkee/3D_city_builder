@@ -10,20 +10,20 @@ namespace Game.MVP.Presentation.Managers
     public class GameManager : IInitializable
     {
         private readonly IWindowFsm _windowFsm;
-        private readonly LevelService _levelService;
+        private readonly LevelsCreateService _levelsCreateService;
         private readonly SaveLoadService _saveLoadService;
         private readonly TimerService _timerService;
         private readonly MoneyService _moneyService;
 
         public GameManager(
             IWindowFsm windowFsm, 
-            LevelService levelService, 
+            LevelsCreateService levelsCreateService, 
             SaveLoadService saveLoadService,
             TimerService timerService,
             MoneyService moneyService)
         {
             _windowFsm = windowFsm;
-            _levelService = levelService;
+            _levelsCreateService = levelsCreateService;
             _saveLoadService = saveLoadService;
             _timerService = timerService;
             _moneyService = moneyService;
@@ -43,7 +43,7 @@ namespace Game.MVP.Presentation.Managers
             {
                 _windowFsm.CloseWindow(typeof(Loading));
                 _windowFsm.OpenWindow(typeof(MainUi), true);
-                _levelService.InvokePrepareLevel();
+                _levelsCreateService.PrepareLevel();
                 _moneyService.Init();
             }
         }

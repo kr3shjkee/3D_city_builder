@@ -9,13 +9,16 @@ namespace Game.MVP.Presentation.Services
     public class LevelService
     {
         private readonly IWindowFsm _windowFsm;
+        private readonly SaveLoadService _saveLoadService;
 
-        public LevelService(IWindowFsm windowFsm)
+        public LevelService(IWindowFsm windowFsm, SaveLoadService saveLoadService)
         {
             _windowFsm = windowFsm;
+            _saveLoadService = saveLoadService;
         }
         
         public event Action PrepareLevel;
+        public event Action PrepareNewLevel;
         public event Action<int> UpdateStonesCount;
         public event Action<int> BuildItem;
         public event Action<MagazineProgressDto, bool> ShowProgressBar;
@@ -28,6 +31,12 @@ namespace Game.MVP.Presentation.Services
         {
             _windowFsm.OpenWindow(typeof(MainUi), false);
             PrepareLevel?.Invoke();
+        }
+        
+        public void InvokerPrepareNewLevel()
+        {
+            _saveLoadService.UpdateDtoForNewLevel();
+            PrepareNewLevel?.Invoke();
         }
 
         public void InvokeUpdateStonesCount(int count)

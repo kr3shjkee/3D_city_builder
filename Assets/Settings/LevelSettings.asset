@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea73be0b17164c2e9ce912471fb83a1d, type: 3}
   m_Name: LevelSettings
   m_EditorClassIdentifier: 
-  <LevelsOffsetX>k__BackingField: 28.3
+  <LevelsOffsetX>k__BackingField: 27.82
+  <LevelsCount>k__BackingField: 4

@@ -6,5 +6,6 @@ namespace Game.Data.Settings
     public class LevelSettings : ScriptableObject
     {
         [field: SerializeField] public float LevelsOffsetX { get; private set; }
+        [field: SerializeField] public float LevelsCount { get; private set; }
     }
 }

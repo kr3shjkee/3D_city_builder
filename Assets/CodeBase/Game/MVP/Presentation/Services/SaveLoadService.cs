@@ -106,6 +106,20 @@ namespace Game.MVP.Presentation.Services
             SaveData();
         }
 
+        public void UpdateDtoForNewLevel()
+        {
+            _dto.CurrentLevelFinished = false;
+            
+            foreach (MagazineInfo magazineInfo in _dto.MagazinesInfo)
+            {
+                magazineInfo.CurrentBuildParts = 0;
+                magazineInfo.CompletedBuilds = 0;
+                magazineInfo.IsBought = false;
+            }
+
+            SaveData();
+        }
+
         private void CreateNewDto()
         {
             MagazineInfo[] magazineInfo = new MagazineInfo[]
